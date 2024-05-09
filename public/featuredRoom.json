@@ -1,0 +1,22 @@
+[
+    {
+      "room_type": "Family Suite",
+      "images": "https://i.ibb.co/DCvDBsw/ariel-domenden-a-Obx-GPf7-J1o-unsplash.jpg",
+      "description": "Our spacious Family Suites offer ample space for families to relax and unwind. With separate living and sleeping areas, these suites provide the perfect retreat for your family vacation."
+    },
+    {
+      "room_type": "Deluxe Room",
+      "images": "https://i.ibb.co/XCdYMRQ/frames-for-your-heart-8-V45f-Gy-Wz4-unsplash.jpg",
+      "description": "Indulge in luxury with our Deluxe Rooms, featuring elegant furnishings, modern amenities, and breathtaking views. Experience unparalleled comfort and style during your stay."
+    },
+    {
+      "room_type": "Double Suite",
+      "images": "https://i.ibb.co/vdqDnK6/vojtech-bruzek-Yrxr3bs-Pd-S0-unsplash.jpg",
+      "description": "Our Double Suites offer the perfect blend of space and comfort, making them ideal for couples or small families. Enjoy the convenience of two separate bedrooms and a spacious lounge area."
+    },
+    {
+      "room_type": "Luxury Chalet",
+      "images": "https://i.ibb.co/gjbNz0D/andrea-davis-IWfe63th-Jxk-unsplash.jpg",
+      "description": "Escape to our luxurious Chalets and immerse yourself in the beauty of nature. With premium amenities and stunning mountain views, these chalets offer a truly unforgettable retreat."
+    }
+  ]
