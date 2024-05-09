@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Banner = () => {
   return (
     <div className="h-[700px] rounded-none">
-      <Swiper
+      <Swiper 
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
