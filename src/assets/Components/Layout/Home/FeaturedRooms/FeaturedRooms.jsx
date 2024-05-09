@@ -22,6 +22,6 @@ const FeaturedRooms = () => {
             </div>
         </div>
     );
-};
+}; 
 
 export default FeaturedRooms;
