@@ -25,7 +25,7 @@ const NewsletterSignup = () => {
           </p>
         </div>
       </div>
-    </div>
+    </div> 
     );
 };
 
