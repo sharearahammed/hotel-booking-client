@@ -76,7 +76,7 @@ const Register = () => {
         backgroundImage: "url(https://i.ibb.co/wS03yMJ/abigail-keenan-l2-Jp-NQF-q-Dc-unsplash.jpg)",
       }}
       className="bg-cover flex flex-col justify-center font-[sans-serif] text-[#333]  p-4"
-    >
+    > 
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
       <Helmet>
         <title>Sunshine City Register</title>
