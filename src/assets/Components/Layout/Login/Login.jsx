@@ -47,7 +47,7 @@ const Login = () => {
       <Helmet>
         <title>Sunshine City Login</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
-      </Helmet>
+      </Helmet> 
       <div className="flex justify-center lg:h-screen mt-10 mb-10">
         <div
           className="hidden bg-cover lg:block lg:w-2/3"
