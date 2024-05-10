@@ -11,13 +11,15 @@ const FeaturedRooms = () => {
         })
     },[])
     return (
-        <div className="mt-20">
+        <div className="bg-[#E0E1DF] pt-20 pb-20">
             <div>
-                <h1 className="text-5xl font-bold text-center mb-16">Choose Your Apartment Type {featuredRooms.length}</h1>
+                <h1 className="text-5xl font-bold text-center mb-16">Choose Your Apartment Type</h1>
             </div>
-            <div className="flex">
+            <div className="justify-center items-center max-w-7xl mx-auto lg:grid md:grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
                 {
-                    featuredRooms.map(featuredRoom=><FeaturedRoomsCard key={featuredRoom._id}></FeaturedRoomsCard>)
+                    featuredRooms.map(featuredRoom=><FeaturedRoomsCard key={featuredRoom._id}
+                        featuredRoom={featuredRoom}
+                    ></FeaturedRoomsCard>)
                 }
             </div>
         </div>

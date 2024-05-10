@@ -1,7 +1,19 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { CiLogin } from "react-icons/ci";
+import { AuthContext } from "../../Layout/Authconfiguration/Authconfiguration";
+import { Tooltip } from "react-tooltip";
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const logout = () => {
+        logOut()
+          .then()
+          .catch((error) => {
+            console.log(error.message);
+          });
+      };
   const [isOpen, setIsOpen] = useState(false);
 
   const links = (
@@ -142,27 +154,48 @@ const NavBar = () => {
             </div>
 
             <div className="flex items-center mt-4 lg:mt-0">
-              <button
-                className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
-                aria-label="show notifications"
-              >
-                Logout
-              </button>
+              {
+                user ?
+                <button onClick={logout}
+                  className="btn bg-red-400 rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
+                  aria-label="show notifications"
+                >
+                  <div className="flex items-center justify-center gap-1">
+                  <div>Logout</div>
+                  <div className="text-2xl"><CiLogin /></div>
+                  </div>
+                </button> : 
+                <Link to={'/login'}>
+                <button
+                  className="btn bg-[#53624E] rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
+                  aria-label="show notifications"
+                >
+                  <div className="flex items-center justify-center gap-1">
+                  <div>Login</div>
+                  <div className="text-2xl"><CiLogin /></div>
+                  </div>
+                </button>
+                </Link>
+              }
 
-              <div className="dropdown dropdown-end">
+              {
+                user && <div className="dropdown dropdown-end">
                 <div
                   tabIndex={0}
                   role="button"
                   className="btn btn-ghost btn-circle avatar"
                 >
-                  <div className="w-10 rounded-full">
+                  <div data-tooltip-id="my-tooltip"
+        data-tooltip-content={user?.displayName}
+        data-tooltip-place="top" className="w-16 rounded-full">
+            <Tooltip id="my-tooltip" />
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      src={user?.photoURL}
                     />
                   </div>
                 </div>
-                <ul
+                {/* <ul
                   tabIndex={0}
                   className="hidden md:hidden lg:block menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
@@ -175,11 +208,9 @@ const NavBar = () => {
                   <li>
                     <a>Settings</a>
                   </li>
-                  <li>
-                    <a>Logout</a>
-                  </li>
-                </ul>
+                </ul> */}
               </div>
+              }
             </div>
           </div>
         </div>

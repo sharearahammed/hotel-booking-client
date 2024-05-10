@@ -10,6 +10,7 @@ import "./styles.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -39,20 +40,18 @@ const Banner = () => {
           <div className="lg:w-[900px] lg:p-20 absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="space-y-7 pl-8 flex flex-col text-left">
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
-              Welcome to Romazing - Where Romance <br /> Meets Amazing
-              Adventures
+              Welcome to Sunshine City Hotel – <br/> Where Every Stay Shines Bright!
             </h1>
             <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0">
-              Indulge in breathtaking vistas, immerse yourself in vibrant
-              cultures, and create timeless memories with Romazing. Explore our
-              curated collection of dream destinations and let us ignite your
-              passion for travel. Start your journey today!
+              Experience luxury and comfort at Sunshine City Hotel. Immerse yourself in modern elegance and exceptional service during your stay
             </p>
+            <Link to={'/rooms'}>
             <div>
-              <button className="btn rounded-none border-gray-500 text-white bg-gray-500">
-                VIEW ALL SPOTS
+              <button className="btn rounded-none border-[#53624E] text-white bg-[#53624E]">
+                VIEW ALL ROOMS
               </button>
             </div>
+            </Link>
           </div>
           </div>
         </SwiperSlide>
@@ -67,20 +66,18 @@ const Banner = () => {
           <div className="lg:w-[900px] lg:p-20 absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="space-y-7 pl-8 flex flex-col text-left">
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
-              Welcome to Romazing - Where Romance <br /> Meets Amazing
-              Adventures
+              Welcome to Sunshine City Hotel – <br/> Where Every Stay Shines Bright!
             </h1>
             <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0">
-              Indulge in breathtaking vistas, immerse yourself in vibrant
-              cultures, and create timeless memories with Romazing. Explore our
-              curated collection of dream destinations and let us ignite your
-              passion for travel. Start your journey today!
+              Experience luxury and comfort at Sunshine City Hotel. Immerse yourself in modern elegance and exceptional service during your stay
             </p>
+            <Link to={'/rooms'}>
             <div>
-              <button className="btn rounded-none border-gray-500 text-white bg-gray-500">
-                VIEW ALL SPOTS
+              <button className="btn rounded-none border-[#53624E] text-white bg-[#53624E]">
+                VIEW ALL ROOMS
               </button>
             </div>
+            </Link>
           </div>
           </div>
         </SwiperSlide>
@@ -95,20 +92,18 @@ const Banner = () => {
           <div className="lg:w-[900px] lg:p-20 absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="space-y-7 pl-8 flex flex-col text-left">
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
-              Welcome to Romazing - Where Romance <br /> Meets Amazing
-              Adventures
+              Welcome to Sunshine City Hotel – <br/> Where Every Stay Shines Bright!
             </h1>
             <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0">
-              Indulge in breathtaking vistas, immerse yourself in vibrant
-              cultures, and create timeless memories with Romazing. Explore our
-              curated collection of dream destinations and let us ignite your
-              passion for travel. Start your journey today!
+              Experience luxury and comfort at Sunshine City Hotel. Immerse yourself in modern elegance and exceptional service during your stay
             </p>
+            <Link to={'/rooms'}>
             <div>
-              <button className="btn rounded-none border-gray-500 text-white bg-gray-500">
-                VIEW ALL SPOTS
+              <button className="btn rounded-none border-[#53624E] text-white bg-[#53624E]">
+                VIEW ALL ROOMS
               </button>
             </div>
+            </Link>
           </div>
           </div>
         </SwiperSlide>
@@ -123,20 +118,18 @@ const Banner = () => {
           <div className="lg:w-[900px] lg:p-20 absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="space-y-7 pl-8 flex flex-col text-left">
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
-              Welcome to Romazing - Where Romance <br /> Meets Amazing
-              Adventures
+              Welcome to Sunshine City Hotel – <br/> Where Every Stay Shines Bright!
             </h1>
             <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0">
-              Indulge in breathtaking vistas, immerse yourself in vibrant
-              cultures, and create timeless memories with Romazing. Explore our
-              curated collection of dream destinations and let us ignite your
-              passion for travel. Start your journey today!
+              Experience luxury and comfort at Sunshine City Hotel. Immerse yourself in modern elegance and exceptional service during your stay
             </p>
+            <Link to={'/rooms'}>
             <div>
-              <button className="btn rounded-none border-gray-500 text-white bg-gray-500">
-                VIEW ALL SPOTS
+              <button className="btn rounded-none border-[#53624E] text-white bg-[#53624E]">
+                VIEW ALL ROOMS
               </button>
             </div>
+            </Link>
           </div>
           </div>
         </SwiperSlide>
