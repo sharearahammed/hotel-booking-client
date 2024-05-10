@@ -17,7 +17,7 @@ const FeaturRoomCard = () => {
     console.log(cards)
     return (
         <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-            <Helmet>
+            <Helmet> 
         <title>Sunshine City Featured Rooms</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
