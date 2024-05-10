@@ -17,7 +17,7 @@ const Rooms = () => {
         <title>Sunshine City Rooms</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-            <h1>Rooms: {rooms.length}</h1>
+            <h1 className="mt-10 text-center text-3xl font-bold">Total Rooms: {rooms.length}</h1>
             <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
             <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
                 {

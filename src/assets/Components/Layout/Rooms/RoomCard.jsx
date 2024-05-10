@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const RoomCard = ({room}) => {
-    const{room_type,room_images,availability} = room;
+    const{room_type,room_images,availability,price_per_night} = room;
     return (
         <Link to={'/roomdetails'}>
         <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center"
@@ -16,7 +16,9 @@ const RoomCard = ({room}) => {
         </div>
         <main className="p-5 z-10">
             <div
-                className="text-md tracking-tight font-medium leading-7 font-regular text-white">{room_type}
+                className="flex md:gap-0 gap-20 justify-between items-center text-md tracking-tight font-medium leading-7 font-regular text-white">
+                    <div>{room_type}</div>
+                    <div>$ {price_per_night}</div>
             </div>
         </main>
     </div>

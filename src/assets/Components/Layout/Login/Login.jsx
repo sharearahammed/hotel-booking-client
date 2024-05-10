@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const Login = () => {
   const { setReload, signInUser, setUser, GoogleSignIn } =
@@ -16,7 +18,16 @@ const Login = () => {
       .then((result) => {
         const logedInUser = result.user;
         setUser(logedInUser);
-        navigate("/");
+        console.log(logedInUser.accessToken)
+        const user = logedInUser.accessToken;
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+        .then(data=>{
+            console.log(data.data)
+            if(data.data.success){
+                navigate(location?.state ? location?.state : '/')
+                toast.success("User Login Successfully");
+            }
+        })
       })
       .catch((error) => {
         console.error("error", error.message);
@@ -33,9 +44,16 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
-        navigate("/");
-        setReload(true);
-        toast.success("User Login Successfully");
+        const user = {email}
+        // setReload(true);
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+        .then(data=>{
+            console.log(data.data)
+            if(data.data.success){
+                navigate(location?.state ? location?.state : '/')
+                toast.success("User Login Successfully");
+            }
+        }) 
       })
       .catch((error) => {
         console.error(error.message);
@@ -121,7 +139,7 @@ const Login = () => {
                     className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                   <span
-                    className="absolute top-[374px] right-10 md:bottom-[154px] md:right-[200px] lg:top-[480px] lg:right-11"
+                    className="absolute top-[374px] right-10 md:bottom-[154px] md:right-[200px] lg:top-[485px] lg:right-16"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
