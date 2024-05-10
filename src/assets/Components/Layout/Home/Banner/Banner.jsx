@@ -36,7 +36,7 @@ const Banner = () => {
             backgroundImage:
               'url("https://i.ibb.co/qRqHtbT/shai-pal-56-WKMCORs-0-unsplash.jpg")',
           }}
-        > 
+        >  
           <div className="lg:w-[900px] lg:p-20 absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="space-y-7 pl-8 flex flex-col text-left">
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
