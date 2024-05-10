@@ -56,6 +56,10 @@ const router = createBrowserRouter([
         {
           path: '/featuredroom/:room_type',
           element: <PrivatePortes><FeaturRoomCard></FeaturRoomCard></PrivatePortes>
+        },
+        {
+          path: '/roomdetails/:id',
+          element: <PrivatePortes><RoomDetails></RoomDetails></PrivatePortes>
         }
 
 

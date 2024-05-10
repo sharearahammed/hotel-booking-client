@@ -3,9 +3,9 @@
 import { Link } from "react-router-dom";
 
 const RoomCard = ({room}) => {
-    const{room_type,room_images,availability,price_per_night} = room;
+    const{_id,room_type,room_images,availability,minPrice,maxPrice} = room;
     return (
-        <Link to={'/roomdetails'}>
+        <Link to={`/roomdetails/${_id}`}>
         <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center"
         style={{ height: '260px',backgroundImage: `url(${room_images})` }}>
         <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900">
@@ -16,9 +16,9 @@ const RoomCard = ({room}) => {
         </div>
         <main className="p-5 z-10">
             <div
-                className="flex md:gap-0 gap-20 justify-between items-center text-md tracking-tight font-medium leading-7 font-regular text-white">
+                className="flex flex-col justify-between items-center text-md tracking-tight font-medium leading-7 font-regular text-white">
                     <div>{room_type}</div>
-                    <div>$ {price_per_night}</div>
+                    <div>$ {minPrice} - $ {maxPrice}</div>
             </div>
         </main>
     </div>

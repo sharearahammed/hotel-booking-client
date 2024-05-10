@@ -28,7 +28,7 @@ const Banner = () => {
         
         navigation={true}
         modules={[ Autoplay, Pagination, Navigation]}
-        className="rounded-lg mySwiper"
+        className="rounded-none mySwiper"
       >
         <SwiperSlide
           className="hero min-h-screen rounded-none bg-no-repeat bg-cover"

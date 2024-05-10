@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const Login = () => {
-  const { setReload, signInUser, setUser, GoogleSignIn } =
+  const { signInUser, setUser, GoogleSignIn } =
     useContext(AuthContext);
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -157,7 +157,7 @@ const Login = () => {
 
                   <div
                     onClick={handleGoogleSignIn}
-                    className="flex items-center justify-center px-6 py-3 mt-4 text-black transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-black hover:bg-gray-50 dark:hover:bg-gray-600"
+                    className="cursor-pointer flex items-center justify-center px-6 py-3 mt-4 text-black transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-black hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
                     <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                       <path

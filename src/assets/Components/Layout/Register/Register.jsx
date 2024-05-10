@@ -212,8 +212,8 @@ const Register = () => {
               Sign Up
             </button>
 
-            <div className="mt-6 text-center ">
-              Already have an account?
+            <div className="text-white mt-6 text-center ">
+              Already have an account? 
               {user ? (
                 <Link
                   to={"/"}
