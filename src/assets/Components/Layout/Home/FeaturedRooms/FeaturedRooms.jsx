@@ -5,7 +5,7 @@ import FeaturedRoomsCard from "./FeaturedRoomsCard";
 const FeaturedRooms = () => {
     const [featuredRooms , setFeaturedRooms ] = useState([]);
     useEffect(()=>{
-        axios('http://localhost:5000/featuredRoom')
+        axios('http://localhost:5000/rooms')
         .then(data=>{
             setFeaturedRooms(data.data)
         })
@@ -17,7 +17,7 @@ const FeaturedRooms = () => {
             </div>
             <div className="justify-center items-center max-w-7xl mx-auto lg:grid md:grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
                 {
-                    featuredRooms.map(featuredRoom=><FeaturedRoomsCard key={featuredRoom._id}
+                    featuredRooms.slice(0,4).map(featuredRoom=><FeaturedRoomsCard key={featuredRoom._id}
                         featuredRoom={featuredRoom}
                     ></FeaturedRoomsCard>)
                 }

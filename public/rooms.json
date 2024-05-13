@@ -1,0 +1,135 @@
+[
+    {
+      "room_type": "Family Suite",
+      "room_description": "Spacious suite perfect for families with separate living and sleeping areas.",
+      "price_per_night": 250,
+      "room_size": "800 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/MVKhZ7P/new-family-room-1.jpg", "https://i.ibb.co/djkpSgP/family-suite.jpg"],
+      "special_offers": "10% off for bookings of 3 nights or more.",
+      "maxPrice": 280,
+      "minPrice": 200
+    },
+    {
+      "room_type": "Deluxe Room",
+      "room_description": "Elegantly furnished room with modern amenities and a comfortable king-sized bed.",
+      "price_per_night": 150,
+      "room_size": "400 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/9w30wWQ/deluxe-king-1.jpg", "https://i.ibb.co/6rBSgXL/211110-gantry-day1-king-deluxe-1-hg.jpg"],
+      "special_offers": "",
+      "maxPrice": 200,
+      "minPrice": 150
+    },
+    {
+      "room_type": "Double Suite",
+      "room_description": "Two-bedroom suite with a spacious lounge area and stunning views of the city skyline.",
+      "price_per_night": 300,
+      "room_size": "1000 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/kmZBPw4/Double-Suite.jpg", "https://i.ibb.co/NVrL4ZG/sjcsm-2-double-suite-view-03.jpg"],
+      "special_offers": "Complimentary breakfast included.",
+      "maxPrice": 320,
+      "minPrice": 250
+    },
+    {
+      "room_type": "Luxury Chalet",
+      "room_description": "A secluded and luxurious chalet nestled in the heart of nature, offering privacy and serenity.",
+      "price_per_night": 400,
+      "room_size": "1200 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/k16WQ63/Face-nord-1.jpg", "https://i.ibb.co/f9xz63X/Chalet-Place-Blanche-Verbier-Switzerland-Les-Trois-Rocs-001.jpg"],
+      "special_offers": "Free spa treatment for two during your stay.",
+      "maxPrice": 450,
+      "minPrice": 400
+    },
+    {
+      "room_type": "Family Suite",
+      "room_description": "A spacious suite perfect for families with children, featuring a separate kids' room and a master bedroom.",
+      "price_per_night": 280,
+      "room_size": "900 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/HgVLbSg/x-bed-03-family-1-1.jpg", "https://i.ibb.co/Y02QMqR/family-suite-wide.jpg"],
+      "special_offers": "Children stay and eat for free.",
+      "maxPrice": 280,
+      "minPrice": 200
+    },
+    {
+      "room_type": "Deluxe Room",
+      "room_description": "An upscale room with luxurious amenities and stunning views of the ocean.",
+      "price_per_night": 200,
+      "room_size": "450 sq ft",
+      "availability": "not available",
+      "room_images": ["https://i.ibb.co/t8MPJrw/deluxe-web.jpg", "https://i.ibb.co/svSt84z/vt-deluxe-room-alaya-ubud.jpg"],
+      "special_offers": "",
+      "maxPrice": 200,
+      "minPrice": 150
+    },
+    {
+      "room_type": "Double Suite",
+      "room_description": "A stylish suite with two bedrooms, ideal for couples or small families.",
+      "price_per_night": 320,
+      "room_size": "950 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/8cdvgRm/Double-Suite-2.jpg", "https://i.ibb.co/Ttk3FZL/2-BR-Deluxe-Suite-Ocean-View-4.jpg"],
+      "special_offers": "Complimentary wine and cheese platter upon arrival.",
+      "maxPrice": 320,
+      "minPrice": 250
+    },
+    {
+      "room_type": "Luxury Chalet",
+      "room_description": "An exquisite chalet offering unparalleled luxury and breathtaking mountain views.",
+      "price_per_night": 450,
+      "room_size": "1500 sq ft",
+      "availability": "available",
+      "room_images": ["https://i.ibb.co/fvfbb7d/Luxury-Chalet-2.jpg", "https://i.ibb.co/BcdQ5BG/luxury-chalet-Montana-Courchevel1850-bedroom-1200x750.jpg"],
+      "special_offers": "Private butler service included.",
+      "maxPrice": 450,
+      "minPrice": 400
+    },
+    {
+      "room_type": "Family_Suite",
+      "room_images": ["https://i.ibb.co/DCvDBsw/ariel-domenden-a-Obx-GPf7-J1o-unsplash.jpg","https://i.ibb.co/MVKhZ7P/new-family-room-1.jpg"],
+      "room_description": "Our spacious Family Suites offer ample space for families to relax and unwind. With separate living and sleeping areas, these suites provide the perfect retreat for your family vacation.",
+      "price_per_night": 250,
+      "room_size": "800 sq ft",
+      "availability": "available",
+      "special_offers": "5% off for bookings of 3 nights or more.",
+      "maxPrice": 770,
+      "minPrice": 880
+    },
+    {
+      "room_type": "Deluxe_Room",
+      "room_images": ["https://i.ibb.co/XCdYMRQ/frames-for-your-heart-8-V45f-Gy-Wz4-unsplash.jpg","https://i.ibb.co/9w30wWQ/deluxe-king-1.jpg"],
+      "room_description": "Indulge in luxury with our Deluxe Rooms, featuring elegant furnishings, modern amenities, and breathtaking views. Experience unparalleled comfort and style during your stay.",
+      "price_per_night": 250,
+      "room_size": "800 sq ft",
+      "availability": "available",
+      "special_offers": "5% off for bookings of 3 nights or more.",
+      "maxPrice": 440,
+      "minPrice": 550
+    },
+    {
+      "room_type": "Double_Suite",
+      "room_images": ["https://i.ibb.co/vdqDnK6/vojtech-bruzek-Yrxr3bs-Pd-S0-unsplash.jpg","https://i.ibb.co/kmZBPw4/Double-Suite.jpg"],
+      "room_description": "Our Double Suites offer the perfect blend of space and comfort, making them ideal for couples or small families. Enjoy the convenience of two separate bedrooms and a spacious lounge area.",
+      "price_per_night": 250,
+      "room_size": "800 sq ft",
+      "availability": "available",
+      "special_offers": "20% off for bookings of 3 nights or more.",
+      "maxPrice": 550,
+      "minPrice": 660
+    },
+    {
+      "room_type": "Luxury_Chalet",
+      "room_images": ["https://i.ibb.co/gjbNz0D/andrea-davis-IWfe63th-Jxk-unsplash.jpg","https://i.ibb.co/k16WQ63/Face-nord-1.jpg"],
+      "room_description": "Escape to our luxurious Chalets and immerse yourself in the beauty of nature. With premium amenities and stunning mountain views, these chalets offer a truly unforgettable retreat.",
+      "price_per_night": 250,
+      "room_size": "800 sq ft",
+      "availability": "available",
+      "special_offers": "30% off for bookings of 3 nights or more.",
+      "maxPrice": 670,
+      "minPrice": 870
+    }
+  ]
+  

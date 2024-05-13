@@ -18,8 +18,8 @@ const Login = () => {
       .then((result) => {
         const logedInUser = result.user;
         setUser(logedInUser);
-        console.log(logedInUser.accessToken)
-        const user = logedInUser.accessToken;
+        console.log('--------------------------->>>>>>>>>>>>>>>>>>>>>>>',logedInUser.email)
+        const user = logedInUser.email;
         axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
@@ -66,7 +66,7 @@ const Login = () => {
         <title>Sunshine City Login</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet> 
-      <div className="flex justify-center lg:h-screen mt-10 mb-10">
+      <div className="flex justify-center lg:h-screen mt-10 mb-10 lg:mt-28 lg:mb-28">
         <div
           className="hidden bg-cover lg:block lg:w-2/3"
           style={{
@@ -131,6 +131,7 @@ const Login = () => {
                       Forgot password?
                     </a>
                   </div>
+                  <div>
                   <input
                     type={showPassword ? "text" : "password"}
                     name="password"
@@ -139,11 +140,12 @@ const Login = () => {
                     className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                   <span
-                    className="absolute top-[374px] right-10 md:bottom-[154px] md:right-[200px] lg:top-[485px] lg:right-16"
+                    className="absolute top-[374px] right-10 md:bottom-[154px] md:right-[200px] lg:top-[560px] lg:right-16"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                   </span>
+                  </div>
                 </div>
 
                 <div className="mt-6">

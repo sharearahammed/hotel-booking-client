@@ -13,6 +13,7 @@ import PrivatePortes from "./PrivatePortes";
 import RoomDetails from "../assets/Components/Layout/Rooms/RoomDetails";
 import FeaturRoomCard from "../assets/Components/Layout/Home/FeaturedRooms/FeaturRoomCard";
 import ErrorPage from "../assets/Components/ErrorPage/ErrorPage";
+import MyBookingTable from "../assets/Components/Layout/MyBookings/MyBookingTable";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
         {
           path: "/mybookings",
           element: <PrivatePortes><MyBookings></MyBookings></PrivatePortes>
+        },
+        {
+          path: "/mybookings/:id",
+          element: <PrivatePortes><MyBookingTable></MyBookingTable></PrivatePortes>,
+          loader: (params)=> fetch(`http://localhost:5173/mybookings/${params.id}`)
         },
         {
           path: "/about",

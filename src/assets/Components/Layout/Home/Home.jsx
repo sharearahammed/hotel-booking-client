@@ -3,8 +3,14 @@ import Banner from "./Banner/Banner";
 import Location from "./Banner/Map/Location";
 import FeaturedRooms from "./FeaturedRooms/FeaturedRooms";
 import NewsletterSignup from "./NewsletterSignup/NewsletterSignup";
+import Review from "./Review/Review";
+import { useEffect } from "react";
+import SpecialOffersModal from "./SpecialOffersModal/SpecialOffersModal";
 
 const Home = () => {
+  useEffect(() => {
+    document.getElementById('special_offers_modal').showModal(); // Open the modal when Home component mounts
+  }, []);
   return (
     <div>
       <Helmet>
@@ -13,8 +19,10 @@ const Home = () => {
       </Helmet>
       <Banner></Banner>
       <FeaturedRooms></FeaturedRooms>
+      <Review></Review>
       <Location></Location>
       <NewsletterSignup></NewsletterSignup>
+      <SpecialOffersModal></SpecialOffersModal>
     </div>
   );
 };

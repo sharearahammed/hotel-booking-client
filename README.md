@@ -1,8 +1,17 @@
-# React + Vite
+# Roamazing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to My Sunshine City Website!
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can visit the live site [here](https://stately-alfajores-f0a540.netlify.app).
+
+## Features and Characteristics
+
+- User-friendly interface: Our website offers an intuitive and easy-to-navigate interface, ensuring a smooth user experience for visitors of all levels.
+- Responsive design: My Sunshine City Website is fully various devices and screen sizes, including smartphones, tablets, and desktops.
+- User Authentication: A user can register and login through this website.
+- Room Booking Management: Through this Sunshine City website a user can book a room, update his date, review and cancel.
+- Emergency Information Management: Provide emergency contact numbers, healthcare facilities, and safety tips.
+
+### My selected category is Hotel Room Booking.

@@ -3,12 +3,12 @@
 import { Link } from "react-router-dom";
 
 const Card = ({card}) => {
-    const{room_type,room_images,availability} = card || {};
+    const{_id,room_type,room_images,availability} = card || {};
     console.log(card)
     return (
-        <Link to={'/roomdetails'}>
+        <Link to={`/roomdetails/${_id}`}>
         <div className="relative w-full flex items-end justify-start text-left bg-cover bg-center"
-        style={{ height: '260px',backgroundImage: `url(${room_images})` }}>
+        style={{ height: '260px',backgroundImage: `url(${room_images[0]})` }}>
         <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900">
         </div>
         <div className="absolute top-0 right-0 left-0 mx-5 mt-2 flex justify-between items-center">

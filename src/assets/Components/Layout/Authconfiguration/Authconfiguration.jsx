@@ -17,20 +17,9 @@ const AuthConfiguration = ({children}) => {
     const googleProvider = new GoogleAuthProvider();
 
 
-  const [ spotCollection , setSpotCollection ] = useState([]);
-  useEffect(()=>{
-      fetch('https://tourism-management-server-dusky.vercel.app/alltouristsSpot')
-      .then(res=>res.json())
-      .then(data=>{
-        //   console.log(data);
-          setSpotCollection(data);
-      }) 
-  },[])
-
   const GoogleSignIn = () => {
     return signInWithPopup(auth, googleProvider)
   };
-  
 
     const createUser = (email,password) => {
         setLoading(true)
@@ -46,11 +35,12 @@ const AuthConfiguration = ({children}) => {
 
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth , currentUser =>{
+            console.log("user--------->",currentUser)
             const userEmail = currentUser?.email || user?.email;
             const loggedUser = { email:userEmail};
             setUser(currentUser)
             setLoading(false)
-            // console.log('Current User: ',currentUser)
+            console.log('Current User: ',currentUser)
             if(currentUser){
                 axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
                 .then(res=>{
@@ -68,7 +58,7 @@ const AuthConfiguration = ({children}) => {
         } ;
     },[auth, reload, user?.email])
 
-    const authInfo = { spotCollection , setReload,GoogleSignIn,setUser,user,loading,createUser,signInUser,logOut};
+    const authInfo = { setReload,GoogleSignIn,setUser,user,loading,createUser,signInUser,logOut};
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
