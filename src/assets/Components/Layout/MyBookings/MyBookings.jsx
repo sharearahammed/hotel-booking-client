@@ -3,20 +3,33 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../Authconfiguration/Authconfiguration";
 import MyBookingTable from "./MyBookingTable";
+import { useQuery } from "@tanstack/react-query";
 
 const MyBookings = () => {
     const {user} = useContext(AuthContext);
     const[bookings,setBookings]=useState([]);
     // useEffect(()=>{
-    //     axios(`http://localhost:5000/bookings`,{withCredentials: true})
+    //     axios(`https://hotel-booking-server-psi.vercel.app/bookings`,{withCredentials: true})
     //     .then(res=>{
     //         setBookings(res.data)
     //         console.log(res.data)
     //     })
     // },[])
 
+
+    // const {isPending, data: bookings} = useQuery({
+    //     queryKey: ['bookings'],
+    //     queryFn: async () =>{
+    //       const res = await fetch(`https://hotel-booking-server-psi.vercel.app/bookings/${user.email}`);
+    //       return res.json();
+    //     }
+    //   })
+
+    //   if(isPending)return;
+
+
     useEffect(()=>{
-        axios(`http://localhost:5000/bookings/${user.email}`,{withCredentials: true})
+        axios(`https://hotel-booking-server-psi.vercel.app/bookings/${user.email}`,{withCredentials: true})
         .then(res=>{
             setBookings(res.data)
             console.log(res.data)
@@ -34,7 +47,7 @@ const MyBookings = () => {
       
       <div>
         {
-            bookings.map(booking=><MyBookingTable key={booking._id}
+            bookings?.map(booking=><MyBookingTable key={booking._id}
                 booking={booking}
             ></MyBookingTable>)
         }

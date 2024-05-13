@@ -65,15 +65,16 @@ if (differenceDays >= 1) {
       confirmButtonText: " confirm",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/bookings/${_id}`).then((res) => {
+        axios.delete(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`).then((res) => {
           console.log(res.data);
+          toast.success("Booking Cancel Successfully!");
           reloadPage();
         });
 
         // update available list
         const availability = "available";
         axios
-          .patch(`http://localhost:5000/rooms/${room_id}`, { availability })
+          .patch(`https://hotel-booking-server-psi.vercel.app/rooms/${room_id}`, { availability })
           .then((res) => {
             console.log(res.data);
           });
@@ -84,12 +85,17 @@ if (differenceDays >= 1) {
   const handleDate = () => {
     const date = startDate;
     axios
-      .patch(`http://localhost:5000/bookings/${_id}`, { date })
+      .patch(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`, { date })
       .then((res) => {
         console.log(res.data);
+        if(res.data.insertedId){
+          toast.success("Your booking date Update Successfully!");
+        }
+        toast.success("Your booking date Update Successfully!");
+        reloadPage();
       });
-    toast.success("Your booking date Update Successfully!");
-    reloadPage();
+      
+
   };
 
   const handleReviewSubmit = (e) => {
@@ -107,7 +113,7 @@ if (differenceDays >= 1) {
     console.log(review);
 
     if(rating != 'Select Rating'){
-      axios.post("http://localhost:5000/reviews", review).then((res) => {
+      axios.post("https://hotel-booking-server-psi.vercel.app/reviews", review).then((res) => {
       console.log(res.data);
       if (res.data.insertedId) {
         toast.success("Review added Successfully");

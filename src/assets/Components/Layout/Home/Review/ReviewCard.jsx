@@ -10,6 +10,7 @@ const ReviewCard = ({review}) => {
           <h4 className="text-lg font-bold">{username}</h4>
           <h4 className="text-sm">{timestamp}</h4>
           <p className="font-hairline">{comment}</p>
+          <p>Rating: {rating}</p>
         </div>
       </div>
       <br />

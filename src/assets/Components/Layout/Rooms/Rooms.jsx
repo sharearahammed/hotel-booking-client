@@ -6,15 +6,28 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const Rooms = () => {
+
   const [rooms, setRooms] = useState([]);
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+
   useEffect(() => {
-    axios("http://localhost:5000/rooms")
+    axios(`https://hotel-booking-server-psi.vercel.app/rooms?minPrice=${minPrice}&maxPrice=${maxPrice}`)
     .then(
       (data) => {
         setRooms(data.data);
       }
     );
-  }, []);
+    
+  }, [maxPrice, minPrice]);
+
+  const handleMinPriceChange = (e) => {
+    setMinPrice(e.target.value);
+  };
+
+  const handleMaxPriceChange = (e) => {
+    setMaxPrice(e.target.value);
+  };
   
 
   return (
@@ -33,12 +46,24 @@ const Rooms = () => {
             <Tab>Available Rooms</Tab>
             </div>
           </TabList>
+          
           </div>
 
           <TabPanel>
+          <div>
+      <h1>Room Filtering System</h1>
+      <div>
+        <label>Minimum Price:</label>
+        <input type="number" value={minPrice} onChange={handleMinPriceChange} />
+      </div>
+      <div>
+        <label>Maximum Price:</label>
+        <input type="number" value={maxPrice} onChange={handleMaxPriceChange} />
+      </div>
+    </div>
             <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
               <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
-                {rooms.map((room) => (
+                {rooms?.map((room) => (
                   <RoomCard key={room._id} room={room}></RoomCard>
                 ))}
               </div>
@@ -49,7 +74,7 @@ const Rooms = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
                 {rooms
                   .filter((a) => a.availability === "available")
-                  .map((room) => (
+                  ?.map((room) => (
                     <RoomCard key={room._id} room={room}></RoomCard>
                   ))}
               </div>

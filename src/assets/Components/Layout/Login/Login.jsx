@@ -20,7 +20,7 @@ const Login = () => {
         setUser(logedInUser);
         console.log('--------------------------->>>>>>>>>>>>>>>>>>>>>>>',logedInUser.email)
         const user = logedInUser.email;
-        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
@@ -46,7 +46,7 @@ const Login = () => {
         console.log(result.user);
         const user = {email}
         // setReload(true);
-        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
