@@ -1,10 +1,10 @@
-# Roamazing
+# Sunshine
 
 Welcome to My Sunshine City Website!
 
 ## Live Site
 
-You can visit the live site [here](https://stately-alfajores-f0a540.netlify.app).
+You can visit the live site [here](https://fascinating-tapioca-72af1c.netlify.app).
 
 ## Features and Characteristics
 
