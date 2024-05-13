@@ -47,7 +47,7 @@ const NavBar = () => {
           Rooms
         </NavLink>
       </li>
-      <li className="text-gray-400">
+      {user && <li className="text-gray-400">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
@@ -60,7 +60,7 @@ const NavBar = () => {
         >
           My Bookings
         </NavLink>
-      </li>
+      </li>}
       <li className="text-gray-400">
         <NavLink
           className={({ isActive, isPending }) =>
