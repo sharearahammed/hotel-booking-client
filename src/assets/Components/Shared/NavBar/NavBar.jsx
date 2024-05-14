@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { CiLogin } from "react-icons/ci";
 import { AuthContext } from "../../Layout/Authconfiguration/Authconfiguration";
 import { Tooltip } from "react-tooltip";
+import 'animate.css';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -96,7 +97,10 @@ const NavBar = () => {
       <div className="container px-6 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between">
-            <Link to={'/'}><img className="h-[40px]" src="/sunshinecity.svg" alt="" /></Link>
+            <div className="animate__animated
+            animate__jello  animate__delay-2s animate__infinite	infinite">
+            <Link to={'/'}><img  className="h-[40px]" src="/sunshinecity.svg" alt="" /></Link>
+            </div>
 
             {/* Mobile menu button */}
             <div className="flex lg:hidden">

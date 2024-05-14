@@ -4,11 +4,12 @@ import NavBar from "../assets/Components/Shared/NavBar/NavBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Toaster } from "react-hot-toast";
+import './style.css'
 
 
 const Main = () => {
     return (
-        <div>
+        <div className="roboto">
             <NavBar></NavBar>
             <div>
             <Outlet></Outlet>

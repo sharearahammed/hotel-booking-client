@@ -27,14 +27,11 @@ const Rooms = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white">
       <Helmet>
         <title>Sunshine City Rooms: </title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <h1 className="mt-10 text-center text-3xl font-bold text-[18px] lg:text-[30px]">
-        Total Rooms : {rooms.length}
-      </h1>
       <Tabs>
         <div className="container px-6 py-10 mx-auto">
           <div className="text-2xl font-bold flex items-center justify-center">

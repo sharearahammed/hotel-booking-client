@@ -1,73 +1,237 @@
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="bg-white dark:bg-gray-900">
-            <div className="container px-6 py-12 mx-auto">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
-                    <div className="sm:col-span-2">
-                        <h1 className="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">Subscribe our newsletter to get update.</h1>
-
-                        <div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
-                            <input id="email" type="text" className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address" />
-                    
-                            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                                Subscribe
-                            </button>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p className="font-semibold text-gray-800 dark:text-white">Quick Link</p>
-
-                        <div className="flex flex-col items-start mt-5 space-y-2">
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Our Philosophy</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p className="font-semibold text-gray-800 dark:text-white">Industries</p>
-
-                        <div className="flex flex-col items-start mt-5 space-y-2">
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail & E-Commerce</a>
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information Technology</a>
-                            <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance & Insurance</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700" />
-                
-                <div className="flex items-center justify-between">
-                    <a href="#">
-                    <img className="h-[50px]" src="/sunshinecity.svg" alt="" />
-                    </a>
-                    
-                    <div className="flex -mx-2">
-                        <a href="#" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
-                            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12 2Z" />
-                            </svg>
-                        </a>
-
-                        <a href="#" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
-                            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z" />
-                            </svg>
-                        </a>
-
-                        <a href="#" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Github">
-                            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+        <div className="bg-black text-white relative bg-deep-purple-accent-400">
+      <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
+          <div className="md:max-w-md lg:col-span-2">
+            <a
+              href="/"
+              aria-label="Go home"
+              title=""
+              className="inline-flex items-center"
+            >
+              <img className="h-[80px]" src="/public/sunshine.svg" alt="" />
+              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
+                Sunshine City
+              </span>
+            </a>
+            <div className="mt-4 lg:max-w-sm">
+              <p className="text-sm text-deep-purple-50">
+              Welcome to Sunshine City, where every day is bright and full of possibilities! Explore our vibrant community, discover local events, and connect with fellow residents. From sunny days to starlit nights, find your place in the warmth of Sunshine City.
+              </p>
+              
             </div>
-        </footer>
+          </div>
+          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
+            <div>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Category
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    News
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    World
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Games
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    References
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Cherry
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Web
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    eCommerce
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Business
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Apples
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Media
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Brochure
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Nonprofit
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Educational
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Projects
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold tracking-wide text-teal-accent-400">
+                Business
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Infopreneur
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Personal
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Wiki
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                  >
+                    Forum
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
+          <p className="text-sm text-gray-100">
+            © Copyright 2024. All rights reserved.
+          </p>
+          <div className="flex items-center mt-4 space-x-4 sm:mt-0">
+            <a
+              href="/"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
+                <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
+              </svg>
+            </a>
+            <a
+              href="/"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+            >
+              <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
+                <circle cx="15" cy="15" r="4" />
+                <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
+              </svg>
+            </a>
+            <a
+              href="/"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
+                <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     );
 };
 

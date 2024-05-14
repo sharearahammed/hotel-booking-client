@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./styles.css";
+import "./bannerstyles.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="h-[700px] rounded-none">
+    <div className="bg-white rounded-none">
       <Swiper 
         spaceBetween={30}
         centeredSlides={true}

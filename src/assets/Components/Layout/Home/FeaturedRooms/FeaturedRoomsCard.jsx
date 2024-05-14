@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const FeaturedRoomsCard = ({featuredRoom}) => {
     const {_id,room_type,room_images,room_description} = featuredRoom || {};
@@ -12,11 +13,15 @@ const FeaturedRoomsCard = ({featuredRoom}) => {
       >
         <img className="h-[225px] w-[500px]" src={room_images[0]} alt="" />
       </div>
-      <div className="p-6">
-        <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal">
+      <div 
+       className="p-6">
+        <h5 data-aos="zoom-in-right"
+        data-aos-duration="1000" className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal">
           {room_type}
         </h5>
-        <p>{room_description}</p>
+        <p data-aos="zoom-in-right"
+        data-aos-duration="1000"
+        >{room_description}</p>
       </div>
       <div className="p-6 pt-0">
         <Link to={`/roomdetails/${_id}`}>

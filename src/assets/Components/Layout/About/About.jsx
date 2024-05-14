@@ -2,12 +2,12 @@ import { Helmet } from "react-helmet";
 
 const About = () => {
     return (
-        <div>
+        <div className="bg-white">
             <Helmet>
         <title>Sunshine City About</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <h1 className="mt-14 mb-7 text-center font-bold text-4xl">About Us</h1>
+      <h1 className="pt-14 mb-7 text-center font-bold text-4xl">About Us</h1>
       <h2 className="mb-6 text-2xl font-thin text-center">Welcome to Sunshine Hotel Room Booking! Your go-to destination for <br /> hassle-free hotel reservations and unforgettable travel experiences.</h2>
       <section className="w-full mx-auto py-10 ">
 

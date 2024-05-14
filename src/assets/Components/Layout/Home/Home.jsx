@@ -12,7 +12,7 @@ const Home = () => {
     document.getElementById('special_offers_modal').showModal(); // Open the modal when Home component mounts
   }, []);
   return (
-    <div>
+    <div className="">
       <Helmet>
         <title>Sunshine City Home</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

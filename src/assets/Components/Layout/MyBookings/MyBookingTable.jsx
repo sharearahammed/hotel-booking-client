@@ -35,23 +35,17 @@ const MyBookingTable = ({ booking }) => {
 
 
 let bookingCancelableStatus = false;
-// Assuming bookingDate is a Date object representing the booking date
-const bookingDate = new Date(date); // Example booking date
-// Get the current date
+const bookingDate = new Date(date);
 const currentDate = new Date();
-// Calculate the difference in milliseconds between the booking date and the current date
 const differenceMs = bookingDate.getTime() - currentDate.getTime();
-// Calculate the difference in days
 const differenceDays = differenceMs / (1000 * 3600 * 24);
-console.log('current date-----------',currentDate)
-console.log('start date-----------',bookingDate)
-console.log('diff date-----------',differenceDays)
 // Check if the difference is less than or equal to one day
 if (differenceDays >= 1) {
   bookingCancelableStatus = true;
-  console.log(bookingCancelableStatus)
+  // console.log(bookingCancelableStatus)
 }else{
-    console.log(bookingCancelableStatus)
+  bookingCancelableStatus = false;
+    // console.log(bookingCancelableStatus)
 }
 
   const handleCancel = () => {

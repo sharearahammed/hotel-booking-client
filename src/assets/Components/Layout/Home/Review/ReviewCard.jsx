@@ -3,15 +3,19 @@
 const ReviewCard = ({review}) => {
     const {username,rating,timestamp,comment} = review;
     return (
-      <div className="flex flex-col max-w-md m-12">
-      <div className="flex flex-col sm:flex-row border border-gray-700 py-1 px-1 w-full text-center sm:text-left">
-        <div className="flex-shrink-0 m-4 w-16 h-16 rounded-full bg-gray-400 self-center"></div>
-        <div className="flex flex-col py-2 pr-2">
-          <h4 className="text-lg font-bold">{username}</h4>
-          <h4 className="text-sm">{timestamp}</h4>
-          <p className="font-hairline">{comment}</p>
-          <p>Rating: {rating}</p>
+      <div className="bg-red-200 rounded-lg flex flex-col mt-3">
+      <div className="flex flex-col sm:flex-row py-1 px-1 w-full text-center sm:text-left">
+        
+        <div className="flex flex-col p-5">
+          <h4 className="text-xl font-bold">{username}</h4>
+          <h4 className="text-sm font-light text-gray-500">Date: {timestamp}</h4>
+          <div className="mt-2 ">
+          <p className="font-bold">Comment:</p>
+          <p className="text-sm p-2">{comment}</p>
+          </div>
+          <p className="mt-2"><span className="text-slate-800 font-bold">Rating:</span> {rating}</p>
         </div>
+        
       </div>
       <br />
     </div>
