@@ -13,13 +13,13 @@ const MyBookings = () => {
     const { data: bookings} = useQuery({
         queryKey: ['bookings'],
         queryFn: async () =>{
-          const res = await fetch(`http://localhost:5000/bookings/${user.email}`,{credentials: 'include'});
+          const res = await fetch(`https://hotel-booking-server-psi.vercel.app/bookings/${user.email}`,{credentials: 'include'});
           return res.json();
         }
       })
 
     // useEffect(()=>{
-    //     axios(`http://localhost:5000/bookings/${user.email}`,{withCredentials: true})
+    //     axios(`https://hotel-booking-server-psi.vercel.app/bookings/${user.email}`,{withCredentials: true})
     //     .then(res=>{
     //         setBookings(res.data)
     //         console.log(res.data)
