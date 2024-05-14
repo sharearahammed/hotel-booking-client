@@ -12,7 +12,7 @@ const Rooms = () => {
 
   useEffect(() => {
     axios(
-      `https://hotel-booking-server-psi.vercel.app/rooms?minPrice=${minPrice}&maxPrice=${maxPrice}`
+      `http://localhost:5000/rooms?minPrice=${minPrice}&maxPrice=${maxPrice}`
     ).then((data) => {
       setRooms(data.data);
     });

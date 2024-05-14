@@ -16,7 +16,7 @@ import { Pagination } from 'swiper/modules';
 const Review = () => {
     const[reviews,setReviews]=useState([]);
     useEffect(()=>{
-        axios('https://hotel-booking-server-psi.vercel.app/reviews')
+        axios('http://localhost:5000/reviews')
         .then(res=>{
             // console.log(res.data)
             setReviews(res.data)
@@ -24,7 +24,8 @@ const Review = () => {
     },[])
     return (
         <div className="pb-10 pt-20">
-            <h1 className="mb-10 text-center text-5xl font-bold">Customer Review </h1>
+            <h1 data-aos="zoom-in-up"
+        data-aos-duration="2000" className="mb-10 text-center text-5xl font-bold">Customer Review </h1>
             <Swiper
         spaceBetween={30}
         pagination={{

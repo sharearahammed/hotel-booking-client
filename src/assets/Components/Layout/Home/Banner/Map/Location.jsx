@@ -10,8 +10,10 @@ const Location = () => {
     <section className="bg-gray-200">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-6xl mx-auto">
-          <p className="kaushan mb-2 text-[25px]">Destintions</p>
-            <h2 className="text-4xl font-extrabold text-gray-900 Quattrocento">WE’RE HERE FOR YOU</h2>
+          <p  data-aos="fade-right"
+        data-aos-duration="1000" className="kaushan mb-2 text-[25px]">Destintions</p>
+            <h2 data-aos="fade-right"
+        data-aos-duration="2000" className="text-4xl font-extrabold text-gray-900 Quattrocento">WE’RE HERE FOR YOU</h2>
         </div>
         <div className="mt-16 lg:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

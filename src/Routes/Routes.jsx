@@ -14,6 +14,7 @@ import RoomDetails from "../assets/Components/Layout/Rooms/RoomDetails";
 import FeaturRoomCard from "../assets/Components/Layout/Home/FeaturedRooms/FeaturRoomCard";
 import ErrorPage from "../assets/Components/ErrorPage/ErrorPage";
 import MyBookingTable from "../assets/Components/Layout/MyBookings/MyBookingTable";
+import BookingReview from "../assets/Components/Layout/MyBookings/BookingReview";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
         {
           path: '/roomdetails/:id',
           element: <PrivatePortes><RoomDetails></RoomDetails></PrivatePortes>
+        },
+        {
+          path: '/review/:id',
+          element: <BookingReview></BookingReview>
         }
 
 

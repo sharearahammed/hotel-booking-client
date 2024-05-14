@@ -20,7 +20,7 @@ const Login = () => {
         setUser(logedInUser);
         console.log('--------------------------->>>>>>>>>>>>>>>>>>>>>>>',logedInUser.email)
         const user = logedInUser.email;
-        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
@@ -46,7 +46,7 @@ const Login = () => {
         console.log(result.user);
         const user = {email}
         // setReload(true);
-        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
@@ -66,7 +66,7 @@ const Login = () => {
         <title>Sunshine City Login</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet> 
-      <div className="flex justify-center lg:h-screen mt-10 mb-10 lg:mt-28 lg:mb-28">
+      <div className="flex justify-center lg:h-screen pt-10 mb-10 lg:mt-28 lg:mb-28">
         <div
           className="hidden bg-cover lg:block lg:w-2/3"
           style={{

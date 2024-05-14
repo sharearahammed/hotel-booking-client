@@ -29,7 +29,7 @@ const RoomDetails = () => {
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
-    axios(`https://hotel-booking-server-psi.vercel.app/room/${id}`, {
+    axios(`http://localhost:5000/room/${id}`, {
       withCredentials: true,
     }).then((res) => {
       setDatas(res.data);
@@ -39,13 +39,17 @@ const RoomDetails = () => {
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios(`https://hotel-booking-server-psi.vercel.app/review/${id}`).then(
+    axios(`http://localhost:5000/review/${id}`).then(
       (data) => {
         setReviews(data.data);
       }
     );
   }, [id]);
   // console.log("---------------------------------->>>>", reviews);
+
+  const reloadPage = () => {
+    window.location.reload(); // Reload the page
+  };
 
   const handleBookingRoom = (e) => {
     e.preventDefault();
@@ -94,10 +98,10 @@ const RoomDetails = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         navigate("/mybookings");
-        // reloadPage();
+        toast.success('Successfully Booking')
         axios
           .patch(
-            `https://hotel-booking-server-psi.vercel.app/rooms/${datas._id}`,
+            `http://localhost:5000/rooms/${datas._id}`,
             { availability }
           )
           .then((res) => {
@@ -105,18 +109,20 @@ const RoomDetails = () => {
           });
         axios
           .post(
-            "https://hotel-booking-server-psi.vercel.app/bookings",
+            "http://localhost:5000/bookings",
             addBooking
           )
           .then((res) => {
             console.log(res.data);
             if (res.data.insertedId) {
+              reloadPage();
               console.log("post success");
             } else {
               toast.error("Added Failed");
             }
           });
       }
+      
     });
   };
 

@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] xs:w-full   md:p-4 xs:p-0 rounded-md">
 
-          <p className="text-md mt-4">But we're not just another booking website – we're your dedicated travel partner. Our team is passionate about providing exceptional service and personalized support to ensure your journey is as smooth as possible.</p>
+          <p className="text-md mt-4">But we are not just another booking website – we are your dedicated travel partner. Our team is passionate about providing exceptional service and personalized support to ensure your journey is as smooth as possible.</p>
         </div>
         <div className="md:block sm:hidden xs:hidden lg:w-[50%] xs:w-full">
           <img className="lg:rounded-t-lg xs:rounded-sm" src="https://i.ibb.co/SyrR7CK/find-hotel-or-search-hotels-concept-vector-25490418.jpg" alt="billboard image" />
@@ -40,13 +40,13 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] sm:w-full xs:w-full md:p-4 xs:p-0 rounded-md">
           
-          <p className="text-md mt-4">Whether you're seeking a cozy boutique hotel or a luxurious beachfront resort, we're here to make your travel dreams a reality.</p>
+          <p className="text-md mt-4">Whether you are seeking a cozy boutique hotel or a luxurious beachfront resort, we are here to make your travel dreams a reality.</p>
         </div>
       </div>
       <div className="flex-col lg:flex-row xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-6">
         <div className="text-xl flex items-center justify-center lg:w-[50%] xs:w-full   md:p-4 xs:p-0 rounded-md">
 
-          <p className="text-md mt-4">With Sunshine, you'll enjoy access to a vast selection of accommodations, competitive prices, and exclusive deals, all designed to enhance your travel experience.</p>
+          <p className="text-md mt-4">With Sunshine, you will enjoy access to a vast selection of accommodations, competitive prices, and exclusive deals, all designed to enhance your travel experience.</p>
         </div>
         <div className="md:block sm:hidden xs:hidden lg:w-[50%] xs:w-full">
           <img className="lg:rounded-t-lg xs:rounded-sm" src="https://i.ibb.co/h2zrT8m/DSC07998.jpg" />

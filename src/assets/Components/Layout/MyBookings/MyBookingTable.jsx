@@ -1,21 +1,21 @@
 /* eslint-disable react/prop-types */
 
 import axios from "axios";
-import { useContext, useId, useState } from "react";
+import { useId, useState } from "react";
 import Swal from "sweetalert2";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import toast from "react-hot-toast";
 import { MdRateReview } from "react-icons/md";
-import { AuthContext } from "../Authconfiguration/Authconfiguration";
-import moment from "moment";
+import { Link } from "react-router-dom";
+import { ImCross } from "react-icons/im";
+import { FaRegEdit } from "react-icons/fa";
 
 
 
 const MyBookingTable = ({ booking }) => {
 
   const modalId = useId();
-  const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
   const reloadPage = () => {
     window.location.reload(); // Reload the page
@@ -59,7 +59,7 @@ if (differenceDays >= 1) {
       confirmButtonText: " confirm",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`).then((res) => {
+        axios.delete(`http://localhost:5000/bookings/${_id}`).then((res) => {
           console.log(res.data);
           toast.success("Booking Cancel Successfully!");
           reloadPage();
@@ -68,7 +68,7 @@ if (differenceDays >= 1) {
         // update available list
         const availability = "available";
         axios
-          .patch(`https://hotel-booking-server-psi.vercel.app/rooms/${room_id}`, { availability })
+          .patch(`http://localhost:5000/rooms/${room_id}`, { availability })
           .then((res) => {
             console.log(res.data);
           });
@@ -79,7 +79,7 @@ if (differenceDays >= 1) {
   const handleDate = () => {
     const date = startDate;
     axios
-      .patch(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`, { date })
+      .patch(`http://localhost:5000/bookings/${_id}`, { date })
       .then((res) => {
         console.log(res.data);
         if(res.data.insertedId){
@@ -92,33 +92,7 @@ if (differenceDays >= 1) {
 
   };
 
-  const handleReviewSubmit = (e) => {
-    e.preventDefault();
 
-    const form = e.target;
-    const booking_id = booking._id;
-    const room_id = booking.room_id;
-    const username = user?.displayName;
-    const rating = form.rating.value;
-    const timestamp = form.timestamp.value;
-    const comment = form.comment.value;
-
-    const review = { booking_id, room_id, username,timestamp,rating, comment };
-    console.log(review);
-
-    if(rating != 'Select Rating'){
-      axios.post("https://hotel-booking-server-psi.vercel.app/reviews", review).then((res) => {
-      console.log(res.data);
-      if (res.data.insertedId) {
-        toast.success("Review added Successfully");
-      } else {
-        toast.error("Added Failed");
-      }
-    });
-    }else{
-      toast.error("Please Select Your Rating!");
-    }
-  };
 
   return (
     <div>
@@ -132,8 +106,8 @@ if (differenceDays >= 1) {
               <th>Cost</th>
               <th>Date</th>
               <th>Review</th>
-              <th></th>
-              <th></th>
+              <th>Cancel</th>
+              <th>Edit Date</th>
             </tr>
           </thead>
           <tbody>
@@ -160,120 +134,29 @@ if (differenceDays >= 1) {
               </td>
               <td>{new Date(date).toLocaleDateString()}</td>
               <td className="">
-                {/* The button to open modal */}
-                <label
-                  htmlFor="my_modal_7"
-                  className="text-3xl mt-3 flex items-center justify-center"
-                >
-                  <MdRateReview />
-                </label>
-
-                {/* Put this part before </body> tag */}
-                <input
-                  type="checkbox"
-                  id="my_modal_7"
-                  className="modal-toggle"
-                />
-                <div className="modal" role="dialog">
-                  <div className="modal-box">
-                    <div className="flex items-center justify-center p-12">
-                      {/* Author: FormBold Team */}
-                      {/* Learn More: https://formbold.com */}
-                      <div className="mx-auto w-full max-w-[550px] bg-white">
-                        <h1 className="mb-10 flex items-center justify-center"><img className="h-[50px]" src="/sunshinecity.svg" alt="" /></h1>
-                        <h1 className="mb-4 text-center font-bold text-xl">
-                          Give your Valuable Review here
-                        </h1>
-                        <form onSubmit={handleReviewSubmit} method="post">
-                          <div className="mb-5">
-                            <label
-                              htmlFor="name"
-                              className="mb-3 block text-base font-medium text-[#07074D]"
-                            >
-                              Username
-                            </label>
-                            <p className="w-full rounded-none border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">{user?.displayName}</p>
-                          </div>
-
-                          <div className="mb-5">
-                          <label
-                              htmlFor="name"
-                              className="mb-3 block text-base font-medium text-[#07074D]"
-                            >
-                              Rating
-                            </label>
-                          <select
-                  className="p-4 rounded-lg w-full bg-red-200"
-                  name="rating"
-                >
-                  <option>Select Rating</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-                          </div>
-                          <div className="mb-5">
-                            <label className="mb-3 block text-base font-medium text-[#07074D]">
-                              Timestamp
-                            </label>
-                            <input className="w-full rounded-none border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" 
-                            type="text"
-                            name="timestamp"
-                            defaultValue={moment().format("MMM Do YY")}
-                             />
-                            
-                          </div>
-                          <div className="mb-5">
-                            <label
-                              htmlFor="comment"
-                              className="mb-3 block text-base font-medium text-[#07074D]"
-                            >
-                              Comment
-                            </label>
-                            <textarea
-                              rows="4"
-                              name="comment"
-                              id="comment"
-                              placeholder="Type your comment"
-                              className="w-full resize-none rounded-none border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                              required
-                            ></textarea>
-                          </div>
-                          <div>
-                            <button className="hover:shadow-form rounded-none bg-[#53624E] py-3 px-8 text-base font-semibold text-white outline-none">
-                              Review
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <label className="modal-backdrop" htmlFor="my_modal_7">
-                    Close
-                  </label>
-                </div>
+                <Link to={`/review/${room_id}`}>
+                <p className="text-3xl mt-3"><MdRateReview /></p> 
+                </Link>       
               </td>
               <td>
                 {
                   bookingCancelableStatus ? <button
                   onClick={() => handleCancel()}
-                  className="btn bg-red-400 rounded-none mr-2"
+                  className="text-3xl text-red-600 rounded-none mr-2"
                 >
-                  Cancel
+                  <ImCross />
                 </button> : <p>not applicable</p>
                 }
                 
               </td>
               <td>
               <button
-                  className="btn rounded-none bg-green-400"
+                  className="text-3xl text-green-500"
                   onClick={() =>
                     document.getElementById(modalId).showModal()
                   }
                 >
-                  Update date
+                  <FaRegEdit />
                 </button>
                 <dialog
                   id={modalId}
