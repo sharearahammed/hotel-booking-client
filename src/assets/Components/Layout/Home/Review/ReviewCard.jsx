@@ -9,8 +9,8 @@ const ReviewCard = ({review}) => {
       <div className="flex flex-col sm:flex-row py-1 px-1 w-full text-center sm:text-left">
         
         <div className="flex flex-col p-5">
-        <div data-aos="fade-right"
-        data-aos-duration="1000">
+        <div 
+        >
           <svg height="35px" className="mb-2" fill="#5a67d8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             // eslint-disable-next-line react/no-unknown-property
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xmlSpace="preserve">
@@ -24,8 +24,8 @@ const ReviewCard = ({review}) => {
             </g>
         </svg>
           </div>
-          <div data-aos="fade-right"
-        data-aos-duration="1000" className="flex justify-between items-center">
+          <div 
+         className="flex justify-between items-center">
           <div>
           <h4 className="text-xl font-bold">{username}</h4>
           <h4 className="text-sm font-light text-gray-500">{timestamp}</h4>
@@ -35,12 +35,12 @@ const ReviewCard = ({review}) => {
           </div>
           </div>
           <div className="mt-2 ">
-          <p data-aos="fade-right"
+          <p 
         data-aos-duration="2000" className="font-bold">Comment:</p>
-          <p data-aos="fade-right"
+          <p 
         data-aos-duration="2000" className="text-sm p-2">{comment}</p>
           </div>
-          <p data-aos="fade-right"
+          <p 
         data-aos-duration="2000" className="mt-2"><span className="text-slate-800 font-bold">Rating:</span> {rating}</p>
         </div>
         

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
+import { ImArrowDown, ImArrowUp } from "react-icons/im";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
@@ -19,17 +20,23 @@ const Review = () => {
       >
         Customer Reviews
       </h1>
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-center text-2xl">Mouse over the review box and scroll to see all reviews </h1>
+        <h1 className="text-center text-5xl text-blue-500"><ImArrowDown /> </h1>
+      </div>
 
       <div className="flex items-center justify-center">
 
-      <div className="bg-[#F4F2F1] carousel carousel-center max-w-md p-4 space-x-4 rounded-box">
-        <div className="w-[1750px] p-5 gap-5 carousel-item">
+      <div className=" h-96 carousel carousel-vertical rounded-box">
+        
         {reviews.map((review) => (
-              <ReviewCard key={review._id} review={review}></ReviewCard>
+          <div key={review._id} className="flex items-center justify-center h-full lg:w-[500px] carousel-item">
+              <ReviewCard review={review}></ReviewCard>
+              </div>
             ))}
-        </div>
+        </div>      
       </div>
-      </div>
+    
     </div>
   );
 };
