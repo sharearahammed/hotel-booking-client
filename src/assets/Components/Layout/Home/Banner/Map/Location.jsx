@@ -17,7 +17,7 @@ const Location = () => {
         </div>
         <div className="mt-16 lg:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="rounded-lg overflow-hidden">
+            <div>
                 <Map height={300} defaultCenter={[23.9955, 90.4205]} defaultZoom={11}>
         <Marker
           width={50}
@@ -38,19 +38,28 @@ const Location = () => {
                 <div>
                     <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                         <div className="px-6 py-4">
-                            <h3 className="text-lg font-medium text-gray-900">Our Address</h3>
-                            <p className="mt-1 text-gray-600">Bangladesh , Dhaka , Gazipur </p>
+                            <h3 data-aos="fade-up-left"
+        data-aos-duration="1000" className="text-lg font-medium text-gray-900">Our Address</h3>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Bangladesh , Dhaka , Gazipur </p>
                         </div>
                         <div className="border-t border-gray-200 px-6 py-4">
-                            <h3 className="text-lg font-medium text-gray-900">Hours</h3>
-                            <p className="mt-1 text-gray-600">Monday - Friday: 24h</p>
-                            <p className="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
-                            <p className="mt-1 text-gray-600">Sunday: Closed</p>
+                            <h3 data-aos="fade-up-left"
+        data-aos-duration="1000" className="text-lg font-medium text-gray-900">Hours</h3>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Monday - Friday: 24h</p>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Sunday: Closed</p>
                         </div>
                         <div className="border-t border-gray-200 px-6 py-4">
-                            <h3 className="text-lg font-medium text-gray-900">Contact</h3>
-                            <p className="mt-1 text-gray-600">Email: sharearahammed@gmail.com</p>
-                            <p className="mt-1 text-gray-600">Phone: 01876523323</p>
+                            <h3 data-aos="fade-up-left"
+        data-aos-duration="1000" className="text-lg font-medium text-gray-900">Contact</h3>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Email: sharearahammed@gmail.com</p>
+                            <p data-aos="fade-up-left"
+        data-aos-duration="1000" className="mt-1 text-gray-600">Phone: 01876523323</p>
                         </div>
                     </div>
                 </div>
