@@ -1,7 +1,7 @@
 
 const NewsletterSignup = () => {
     return (
-        <div className="mt-16 mb-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#F4F2F1] pt-16 pb-20 mx-auto max-p-7xl px-4 sm:px-6 lg:px-24">
       <div className="rounded-3xl bg-gray-900 py-10 px-6 sm:py-16 sm:px-12 lg:flex lg:items-center lg:p-20">
         <div className="lg:w-0 lg:flex-1">
           <h2 className="text-3xl font-bold tracking-tight text-white">Sign up for our newsletter</h2>
