@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
-import { ImArrowDown, ImArrowUp } from "react-icons/im";
+import { ImArrowDown } from "react-icons/im";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
