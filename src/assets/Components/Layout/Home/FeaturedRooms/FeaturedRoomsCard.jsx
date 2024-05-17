@@ -5,7 +5,7 @@ import 'animate.css';
 const FeaturedRoomsCard = ({featuredRoom}) => {
     const {_id,room_type,room_images,room_description} = featuredRoom || {};
     return (
-        <div className="h-[450px] relative flex flex-col mt-6 text-gray-700  shadow bg-clip-border rounded-none w-full transition-all duration-700 lg:hover:scale-105 lg:hover:border-[#53624E] hover:shadow-2xl">
+        <div className="h-[450px] relative flex flex-col mt-6 text-gray-700 shadow bg-clip-border rounded-none w-full transition-all duration-700 lg:hover:scale-105 lg:hover:border-[#53624E] hover:shadow-2xl">
       <div
         data-aos="zoom-in"
         data-aos-duration="1000"
@@ -14,7 +14,7 @@ const FeaturedRoomsCard = ({featuredRoom}) => {
         <img className="h-[225px] w-[500px]" src={room_images[0]} alt="" />
       </div>
       <div 
-       className="p-6">
+       className="p-6 flex flex-col flex-grow">
         <h5 data-aos="zoom-in-right"
         data-aos-duration="1000" className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal">
           {room_type}
