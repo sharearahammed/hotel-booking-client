@@ -17,7 +17,8 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { ImFire } from "react-icons/im";
-import './roomstyle.css'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const RoomDetails = () => {
   const { user } = useContext(AuthContext);
@@ -132,50 +133,19 @@ const RoomDetails = () => {
         Room Details
       </h1>
       <div className="flex flex-col justify-center items-center">
-        <Swiper
-          style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
-          }}
-          loop={true}
-          spaceBetween={10}
-          navigation={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper2"
-        >
-          {datas && datas.room_images && datas.room_images[0] && (
-            <SwiperSlide className="min-h-screen rounded-none bg-no-repeat bg-cover">
-              <img src={datas.room_images[0]} className="w-full" />
-            </SwiperSlide>
-          )}
-          {datas && datas.room_images && datas.room_images[1] && (
-            <SwiperSlide className="min-h-screen rounded-none bg-no-repeat bg-cover">
-              <img src={datas.room_images[1]} className="w-full" />
-            </SwiperSlide>
-          )}
-          {/* Add other SwiperSlides here */}
-        </Swiper>
-        <Swiper
-          loop={true}
-          spaceBetween={10}
-          slidesPerView={4}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className="mySwiper"
-        >
-          {datas && datas.room_images && datas.room_images[0] && (
-            <SwiperSlide>
-              <img src={datas.room_images[0]} className="w-full" />
-            </SwiperSlide>
-          )}
-          {datas && datas.room_images && datas.room_images[1] && (
-            <SwiperSlide>
-              <img src={datas.room_images[1]} className="w-full" />
-            </SwiperSlide>
-          )}
-          {/* Add other SwiperSlides here */}
-        </Swiper>
+      <Carousel>
+                <div>
+                {datas && datas.room_images && datas.room_images[0] &&(<img src={datas.room_images[0]} className="w-full" />)}
+                    
+                </div>
+                <div>
+                  {datas && datas.room_images && datas.room_images[1] &&(<img src={datas.room_images[1]} className="w-full" />)}
+                
+                   
+                </div>
+                
+            </Carousel>
+
       </div>
       <div className="lg:p-10 md:pr-20 p-5">
         <h1 className="mb-8 font-extrabold text-2xl lg:text-4xl">

@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { ImFire } from "react-icons/im";
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 const ReviewCard = ({review}) => {
     const {username,rating,timestamp,comment} = review;
@@ -9,9 +12,9 @@ const ReviewCard = ({review}) => {
       <div className="flex flex-col sm:flex-row py-1 px-1 w-full text-center sm:text-left">
         
         <div className="flex flex-col p-5">
-        <div 
+        <div className="flex items-center justify-center"
         >
-          <svg height="35px" className="mb-2" fill="#5a67d8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          <svg height="60px" className="mb-2" fill="#5a67d8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             // eslint-disable-next-line react/no-unknown-property
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xmlSpace="preserve">
             <g>
@@ -25,23 +28,25 @@ const ReviewCard = ({review}) => {
         </svg>
           </div>
           <div 
-         className="flex justify-between items-center">
+         className="">
           <div>
           <h4 className="text-xl font-bold">{username}</h4>
           <h4 className="text-sm font-light text-gray-500">{timestamp}</h4>
-          </div>
-          <div className="text-5xl text-red-500">
-          <ImFire />
+          <p 
+         className="mt-2"><span className="text-slate-800 font-bold"></span> <Rating
+        style={{ maxWidth: 100 }}
+        value={rating}
+        readOnly
+      /></p>
           </div>
           </div>
           <div className="mt-2 ">
           <p 
-        data-aos-duration="2000" className="font-bold">Comment:</p>
+         className="font-bold">Comment:</p>
           <p 
-        data-aos-duration="2000" className="text-sm p-2">{comment}</p>
+         className="text-sm p-2">{comment}</p>
           </div>
-          <p 
-        data-aos-duration="2000" className="mt-2"><span className="text-slate-800 font-bold">Rating:</span> {rating}</p>
+          
         </div>
         
       </div>
