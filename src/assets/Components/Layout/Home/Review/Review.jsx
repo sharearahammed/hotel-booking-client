@@ -24,14 +24,6 @@ const Review = () => {
       >
         Customer Reviews
       </h1>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-center text-2xl">
-          Mouse over the review box and scroll to see all reviews{" "}
-        </h1>
-        <h1 className="text-center text-5xl text-blue-500">
-          <ImArrowDown />{" "}
-        </h1>
-      </div>
 
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       <div className="flex items-center justify-center">
