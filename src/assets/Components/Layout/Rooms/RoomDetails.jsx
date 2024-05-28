@@ -128,7 +128,7 @@ const RoomDetails = () => {
   };
 
   return (
-    <div className="bg-stone-400 pt-7 md:mt-0 lg:mt-0 md:p-12">
+    <div className="bg-[#F4F2F1] pt-7 md:mt-0 lg:mt-0 md:p-12">
       <h1 className="mb-12 lg:text-4xl text-2xl text-center font-bold">
         Room Details
       </h1>
@@ -186,7 +186,7 @@ const RoomDetails = () => {
               </p>
             </div>
 
-            <div className="mt-5 bg-stone-400">
+            <div className="mt-5 bg-[#F4F2F1]">
               <span className="text-[23px] font-bold">Reviews:</span>
               <Swiper style={{
             "--swiper-navigation-color": "#fff",
@@ -197,12 +197,12 @@ const RoomDetails = () => {
           navigation={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper2">
-              <div className="bg-stone-400 lg:grid lg:grid-cols-2 gap-2 ">
+              <div className="bg-[#F4F2F1] lg:grid lg:grid-cols-2 gap-2 ">
                 {reviews.length >= 1 ? (
                   reviews.map((review,idx) => (
                     <SwiperSlide key={idx}>
                       <blockquote
-                      className="bg-stone-400 inline-block w-full p-6 sm:p-10 lg:p-14"
+                      className="bg-[#F4F2F1] inline-block w-full p-6 sm:p-10 lg:p-14"
                     >
                       <div className=" rounded-lg bg-gray-600 p-4 w-full">
                         <div className="flex flex-col sm:flex-row items-center text-red-300 text-5xl">
@@ -289,7 +289,7 @@ const RoomDetails = () => {
               <button
                 disabled={datas.availability === "not available"}
                 type="submit"
-                className=" flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#000000] hover:bg-[#A48B68] md:py-4 md:text-lg md:px-10"
+                className=" flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-none text-white bg-[#53624E] hover:bg-black md:py-4 md:text-lg md:px-10"
               >
                 Book Now
               </button>

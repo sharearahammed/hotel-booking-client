@@ -1,8 +1,10 @@
+import './Newletter.css'
 
 const NewsletterSignup = () => {
     return (
         <div className="bg-[#F4F2F1] pt-16 pb-20 mx-auto max-p-7xl px-4 sm:px-6 lg:px-24">
-      <div className="rounded-3xl bg-gray-900 py-10 px-6 sm:py-16 sm:px-12 lg:flex lg:items-center lg:p-20">
+      <div className="newletter-img lg:h-[350px] bg-fixed bg-cover bg-no-repeat bg-center rounded-xl">
+        <div className='bg-black bg-opacity-45 rounded-xl h-full py-10 px-6 sm:py-16 sm:px-12 lg:flex lg:items-center lg:p-20'>
         <div className="lg:w-0 lg:flex-1">
           <h2 className="text-3xl font-bold tracking-tight text-white">Sign up for our newsletter</h2>
           <p className="mt-4 max-w-3xl text-lg text-gray-100">
@@ -23,6 +25,7 @@ const NewsletterSignup = () => {
             We care about the protection of your data. Read our
             <a href="#" className="font-medium text-white underline">Privacy Policy.</a>
           </p>
+        </div>
         </div>
       </div>
     </div> 

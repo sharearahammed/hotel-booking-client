@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 
 const About = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-[#F4F2F1]">
             <Helmet>
         <title>Sunshine City About</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
