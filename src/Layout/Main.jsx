@@ -9,7 +9,7 @@ import './style.css'
 
 const Main = () => {
     return (
-        <div className="roboto">
+        <div className="roboto bg-[#F8F9FA]">
             <NavBar></NavBar>
             <div>
             <Outlet></Outlet>

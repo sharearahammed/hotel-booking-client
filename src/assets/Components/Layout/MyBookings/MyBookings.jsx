@@ -30,7 +30,7 @@ const MyBookings = () => {
 
     // console.log(bookings)
     return (
-        <div className="bg-[#F4F2F1]">
+        <div className="">
             <Helmet>
         <title>Sunshine City My Bookings</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

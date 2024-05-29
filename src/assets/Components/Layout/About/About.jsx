@@ -2,13 +2,13 @@ import { Helmet } from "react-helmet";
 
 const About = () => {
     return (
-        <div className="bg-[#F4F2F1]">
+        <div className="">
             <Helmet>
         <title>Sunshine City About</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <h1 className="pt-14 mb-7 text-center font-bold text-4xl">About Us</h1>
-      <h2 className="mb-6 text-2xl font-thin text-center">Welcome to Sunshine Hotel Room Booking! Your go-to destination for <br /> hassle-free hotel reservations and unforgettable travel experiences.</h2>
+      <h2 className="mb-6 text-2xl font-thin text-center ">Welcome to Sunshine Hotel Room Booking! Your go-to destination for <br /> hassle-free hotel reservations and unforgettable travel experiences.</h2>
       <section className="w-full mx-auto py-10 ">
 
       <div className="flex-col lg:flex-row xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-4">
@@ -17,7 +17,7 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] sm:w-full xs:w-full md:p-4 xs:p-0 rounded-md">
           
-          <p className="text-md mt-4">At Sunshine, we understand that finding the perfect accommodation is the cornerstone of any successful trip. That is why we have curated a seamless platform where you can easily discover and book your ideal hotel room in just a few clicks.</p>
+          <p className="text-md mt-4 text-justify">At Sunshine, we understand that finding the perfect accommodation is the cornerstone of any successful trip. That is why we have curated a seamless platform where you can easily discover and book your ideal hotel room in just a few clicks.</p>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] xs:w-full   md:p-4 xs:p-0 rounded-md">
 
-          <p className="text-md mt-4">But we are not just another booking website – we are your dedicated travel partner. Our team is passionate about providing exceptional service and personalized support to ensure your journey is as smooth as possible.</p>
+          <p className="text-md mt-4 text-justify">But we are not just another booking website – we are your dedicated travel partner. Our team is passionate about providing exceptional service and personalized support to ensure your journey is as smooth as possible.</p>
         </div>
         <div className="md:block sm:hidden xs:hidden lg:w-[50%] xs:w-full">
           <img className="lg:rounded-t-lg xs:rounded-sm" src="https://i.ibb.co/SyrR7CK/find-hotel-or-search-hotels-concept-vector-25490418.jpg" alt="billboard image" />
@@ -40,13 +40,13 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] sm:w-full xs:w-full md:p-4 xs:p-0 rounded-md">
           
-          <p className="text-md mt-4">Whether you are seeking a cozy boutique hotel or a luxurious beachfront resort, we are here to make your travel dreams a reality.</p>
+          <p className="text-md mt-4 text-justify">Whether you are seeking a cozy boutique hotel or a luxurious beachfront resort, we are here to make your travel dreams a reality.</p>
         </div>
       </div>
       <div className="flex-col lg:flex-row xl:w-[80%] sm:w-[85%] xs:w-[90%] mx-auto flex md:flex-row xs:flex-col lg:gap-4 xs:gap-2 justify-center lg:items-stretch md:items-center mt-6">
         <div className="text-xl flex items-center justify-center lg:w-[50%] xs:w-full   md:p-4 xs:p-0 rounded-md">
 
-          <p className="text-md mt-4">With Sunshine, you will enjoy access to a vast selection of accommodations, competitive prices, and exclusive deals, all designed to enhance your travel experience.</p>
+          <p className="text-md mt-4 text-justify">With Sunshine, you will enjoy access to a vast selection of accommodations, competitive prices, and exclusive deals, all designed to enhance your travel experience.</p>
         </div>
         <div className="md:block sm:hidden xs:hidden lg:w-[50%] xs:w-full">
           <img className="lg:rounded-t-lg xs:rounded-sm" src="https://i.ibb.co/h2zrT8m/DSC07998.jpg" />
@@ -58,7 +58,7 @@ const About = () => {
         </div>
         <div className="text-xl flex items-center justify-center lg:w-[50%] sm:w-full xs:w-full md:p-4 xs:p-0 rounded-md">
           
-          <p className="text-md mt-4">So why wait? Start planning your next adventure with Sunshine Hotel Room Booking today!</p>
+          <p className="text-md mt-4 text-justify">So why wait? Start planning your next adventure with Sunshine Hotel Room Booking today!</p>
         </div>
       </div>
     </section>

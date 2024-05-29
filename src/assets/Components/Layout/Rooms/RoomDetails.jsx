@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { FaRegHandPointRight } from "react-icons/fa";
+import { FaRegHandPointRight, FaUser } from "react-icons/fa";
 import { PiCurrencyDollarFill } from "react-icons/pi";
 import { SlSizeFullscreen } from "react-icons/sl";
 import { useNavigate, useParams } from "react-router-dom";
@@ -204,22 +204,23 @@ const RoomDetails = () => {
                       <blockquote
                       className="bg-[#F4F2F1] inline-block w-full p-6 sm:p-10 lg:p-14"
                     >
-                      <div className=" rounded-lg bg-gray-600 p-4 w-full">
+                      <div className=" rounded-lg bg-white p-4 w-full">
                         <div className="flex flex-col sm:flex-row items-center text-red-300 text-5xl">
-                        <ImFire />
-
-                          <div className="text-sm text-[#F3EEFF]">
-                            <p className="font-semibold">{user.displayName}</p>
-                            <p className="">
+                        <div className="mb-3">
+                        <FaUser />
+                        </div>
+                        </div>
+                        <div className="text-left text-sm text-black">
+                            <p className="font-bold text-xl">{user.displayName}</p>
+                            <p className="font-light">
                               Date: {review.timestamp}
                             </p>
                             
                           </div>
-                        </div>
-                        <p className="mt-4 text-sm text-[#B1B7E9]">
+                        <p className="mt-4 text-sm text-[#212529] text-justify">
                           {review.comment}
                         </p>
-                        <div className="flex justify-start text-white ">
+                        <div className="flex justify-start text-[#212529] ">
                         <p className="">
                               <span className="font-bold text-xl">Rating:</span> {review.rating}
                             </p>
@@ -240,7 +241,7 @@ const RoomDetails = () => {
             </div>
 
             <div className="mt-10">
-              <h1 className="text-2xl font-bold">Description:</h1>
+              <h1 className="text-2xl font-bold text-justify">Description:</h1>
               <p className="text-[23px]">{datas.room_description}</p>
             </div>
           </aside>
@@ -289,7 +290,7 @@ const RoomDetails = () => {
               <button
                 disabled={datas.availability === "not available"}
                 type="submit"
-                className=" flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-none text-white bg-[#53624E] hover:bg-black md:py-4 md:text-lg md:px-10"
+                className=" flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-none text-white bg-[#5F0F40] hover:bg-black md:py-4 md:text-lg md:px-10"
               >
                 Book Now
               </button>

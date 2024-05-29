@@ -21,12 +21,12 @@ const Contact = () => {
         <div className="flex items-stretch justify-center">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
-              <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+              <p className="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 text-justify">
               Your gateway to seamless travel experiences! Easily reserve your dream accommodations with our user-friendly platform. Need assistance? Get in touch with us today for personalized support and exceptional service.
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="rounded-none flex h-10 w-10 items-center justify-center bg-[#E36414] text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                       strokeLinejoin="round" className="h-6 w-6">
@@ -44,7 +44,7 @@ const Contact = () => {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-none bg-[#E36414] text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                       strokeLinejoin="round" className="h-6 w-6">
@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-none bg-[#E36414] text-gray-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
                       strokeLinejoin="round" className="h-6 w-6">
@@ -98,7 +98,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
+                  <button type="submit" className="w-full bg-[#5F0F40] text-white px-6 py-3 font-xl rounded-none sm:mb-0">Send Message</button>
                 </div>
               </form>
             </div>

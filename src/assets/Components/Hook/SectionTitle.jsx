@@ -6,7 +6,7 @@ const SectionTitle = ({ heading, subHeading }) => {
       <p
         data-aos="zoom-in-up"
         data-aos-duration="2000"
-        className="text-yellow-600 mb-2"
+        className="text-[#E36414] text-[25px] mb-2"
       >
         ---{subHeading}---
       </p>

@@ -1,37 +1,26 @@
 /* eslint-disable react/prop-types */
 
-import { ImFire } from "react-icons/im";
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import { FaUser } from 'react-icons/fa';
 
 const ReviewCard = ({review}) => {
     const {username,rating,timestamp,comment} = review;
     return (
-      <div className="bg-white border border-blue-700 rounded-lg flex flex-col mt-3">
-      <div className="flex flex-col sm:flex-row py-1 px-1 w-full text-center sm:text-left">
+      <div className="bg-white border border-blue-700 rounded-none flex flex-col mt-3 h-[450px]">
+      <div className="flex flex-col sm:flex-row py-1 px-1 w-full sm:text-left">
         
         <div className="flex flex-col p-5">
-        <div className="flex items-center justify-center"
+        <div className="text-left text-[50px] lg:mb-7"
         >
-          <svg height="60px" className="mb-2" fill="#5a67d8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-            // eslint-disable-next-line react/no-unknown-property
-            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xmlSpace="preserve">
-            <g>
-                <g id="right_x5F_quote">
-                    <g>
-                        <path d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
-                        <path d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z"></path>
-                    </g>
-                </g>
-            </g>
-        </svg>
+          <FaUser className='border rounded-full p-2' />
           </div>
           <div 
          className="">
           <div>
-          <h4 className="text-xl font-bold">{username}</h4>
-          <h4 className="text-sm font-light text-gray-500">{timestamp}</h4>
+          <h4 className="text-left text-xl font-bold">{username}</h4>
+          <h4 className="text-left text-sm font-light text-gray-500">{timestamp}</h4>
           <p 
          className="mt-2"><span className="text-slate-800 font-bold"></span> <Rating
         style={{ maxWidth: 100 }}
@@ -42,9 +31,9 @@ const ReviewCard = ({review}) => {
           </div>
           <div className="mt-2 ">
           <p 
-         className="font-bold">Comment:</p>
+         className="text-left font-bold">Comment:</p>
           <p 
-         className="text-sm p-2">{comment}</p>
+         className="text-sm p-2 text-justify">{comment}</p>
           </div>
           
         </div>

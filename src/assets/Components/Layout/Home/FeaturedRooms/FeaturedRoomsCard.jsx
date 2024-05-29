@@ -14,19 +14,20 @@ const FeaturedRoomsCard = ({featuredRoom}) => {
         <img className="h-[225px] w-[500px]" src={room_images[0]} alt="" />
       </div>
       <div 
-       className="p-6 flex flex-col flex-grow">
+       className="p-6 flex flex-col flex-grow text-bl">
         <h5 data-aos="zoom-in-right"
-        data-aos-duration="1000" className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal">
+        data-aos-duration="1000" className="block mb-2 font-sans text-xl antialiased font-bold leading-snug tracking-normal text-black text-center">
           {room_type}
         </h5>
         <p data-aos="zoom-in-right"
         data-aos-duration="1000"
+        className="text-justify text-[#212529] font-light"
         >{room_description}</p>
       </div>
-      <div className="p-6 pt-0">
+      <div className="p-6 pt-0 text-center">
         <Link to={`/roomdetails/${_id}`}>
           <button
-            className="animate__animated animate__pulse animate__delay-2s animate__infinite	infinite align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-none bg-[#53624E] text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 hover:bg-secondary-content hover:text-[#31323C] hover:border hover:border-[#31323C] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+            className="animate__animated animate__pulse animate__delay-2s animate__infinite	infinite align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-none bg-[#5F0F40] text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 hover:bg-secondary-content hover:text-[#31323C] hover:border hover:border-[#31323C] focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
             type="button"
           >
             Book Now

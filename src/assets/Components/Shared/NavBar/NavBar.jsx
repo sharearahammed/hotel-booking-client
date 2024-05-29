@@ -19,11 +19,11 @@ const NavBar = () => {
 
   const links = (
     <>
-      <li className="text-gray-400">
+      <li className="text-black font-bold">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-gray-500 font-bold border-2 border-gray-400 rounded-none"
+              ? "text-black font-bold border-2 border-gray-400 rounded-none"
               : isPending
               ? "pending"
               : ""
@@ -34,11 +34,11 @@ const NavBar = () => {
         </NavLink>
       </li>
 
-      <li className="text-gray-400">
+      <li className="text-black font-bold">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-gray-500 font-bold border-2 border-gray-400 rounded-none"
+              ? "text-black font-bold border-2 border-gray-400 rounded-none"
               : isPending
               ? "pending"
               : ""
@@ -48,11 +48,11 @@ const NavBar = () => {
           Rooms
         </NavLink>
       </li>
-      {user && <li className="text-gray-400">
+      {user && <li className="text-black font-bold">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-gray-500 font-bold border-2 border-gray-400 rounded-none"
+              ? "text-black font-bold border-2 border-gray-400 rounded-none"
               : isPending
               ? "pending"
               : ""
@@ -62,11 +62,11 @@ const NavBar = () => {
           My Bookings
         </NavLink>
       </li>}
-      <li className="text-gray-400">
+      <li className="text-black font-bold">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-gray-500 font-bold border-2 border-gray-400 rounded-none"
+              ? "text-black font-bold border-2 border-gray-400 rounded-none"
               : isPending
               ? "pending"
               : ""
@@ -76,11 +76,11 @@ const NavBar = () => {
           About
         </NavLink>
       </li>
-      <li className="text-gray-400">
+      <li className="text-black font-bold">
         <NavLink
           className={({ isActive, isPending }) =>
             isActive
-              ? "text-gray-500 font-bold border-2 border-gray-400 rounded-none"
+              ? "text-black font-bold border-2 border-gray-400 rounded-none"
               : isPending
               ? "pending"
               : ""
@@ -107,7 +107,7 @@ const NavBar = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="text-gray-500  hover:text-gray-600  focus:outline-none  "
+                className="text-black  hover:text-gray-600  focus:outline-none  "
                 aria-label="toggle menu"
               >
                 {!isOpen ? (
@@ -161,7 +161,7 @@ const NavBar = () => {
               {
                 user ?
                 <button onClick={logout}
-                  className="btn bg-red-400 rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
+                  className="btn bg-red-600 border-none rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
                   aria-label="show notifications"
                 >
                   <div className="flex items-center justify-center gap-1">
@@ -171,12 +171,12 @@ const NavBar = () => {
                 </button> : 
                 <Link to={'/login'}>
                 <button
-                  className="btn bg-[#53624E] rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
+                  className="btn bg-[#5F0F40] border-none rounded-none mx-4 text-white transition-colors duration-300 transform  hover:text-gray-700  focus:text-gray-700  focus:outline-none"
                   aria-label="show notifications"
                 >
                   <div className="flex items-center justify-center gap-1">
                   <div>Login</div>
-                  <div className="text-2xl"><CiLogin /></div>
+                  <div className="text-3xl"><CiLogin /></div>
                   </div>
                 </button>
                 </Link>

@@ -11,7 +11,7 @@ const FeaturedRooms = () => {
     });
   }, []);
   return (
-    <div className="bg-[#F4F2F1] pt-20 pb-20">
+    <div className="pt-20 pb-20">
       <div className="mb-6">
       <SectionTitle
         data-aos="zoom-in-up"

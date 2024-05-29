@@ -17,7 +17,7 @@ const Footer = () => {
               </span>
             </a>
             <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-deep-purple-50">
+              <p className="text-sm text-deep-purple-50 text-justify">
               Welcome to Sunshine City, where every day is bright and full of possibilities! Explore our vibrant community, discover local events, and connect with fellow residents. From sunny days to starlit nights, find your place in the warmth of Sunshine City.
               </p>
               

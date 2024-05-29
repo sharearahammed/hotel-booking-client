@@ -6,6 +6,7 @@ import NewsletterSignup from "./NewsletterSignup/NewsletterSignup";
 import Review from "./Review/Review";
 import { useEffect } from "react";
 import SpecialOffersModal from "./SpecialOffersModal/SpecialOffersModal";
+import LuxuryOffer from "./LuxuryOffer/LuxuryOffer";
 
 const Home = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
       </Helmet>
       <Banner></Banner>
       <FeaturedRooms></FeaturedRooms>
+      <LuxuryOffer></LuxuryOffer>
       <Review></Review>
       <Location></Location>
       <NewsletterSignup></NewsletterSignup>

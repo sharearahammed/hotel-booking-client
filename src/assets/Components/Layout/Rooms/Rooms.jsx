@@ -27,7 +27,7 @@ const Rooms = () => {
   };
 
   return (
-    <div className="bg-[#F4F2F1]">
+    <div className="">
       <Helmet>
         <title>Sunshine City Rooms: </title>
         <link rel="canonical" href="https://www.tacobell.com/" />
