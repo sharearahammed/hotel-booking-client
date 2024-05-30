@@ -86,7 +86,7 @@ const Register = () => {
     > 
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
       <Helmet>
-        <title>Sunshine City Register</title>
+        <title>Sunshine City Register</title> 
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
         <form onSubmit={handleSignup} className="w-full max-w-md">
