@@ -43,7 +43,7 @@ const Banner = () => {
             <h1 className="animate__animated animate__fadeInDown mb-4 text-xl md:text-2xl lg:text-4xl text-white font-bold">
               Welcome to Sunshine City <span className="lg:text-5xl font-extrabold bg-gradient-to-r from-[#FB8B24] to-[#ff4400eb]  bg-clip-text text-transparent">Hotel</span> – <br/> Where Every Stay Shines Bright!
             </h1>
-            <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0 text-justify">
+            <p className="mb-3 text-white text-[12px] lg:text-[18px] lg:p-0">
               Experience luxury and comfort at Sunshine City Hotel. Immerse yourself in modern elegance and exceptional service during your stay
             </p>
             <Link to={'/rooms'}>

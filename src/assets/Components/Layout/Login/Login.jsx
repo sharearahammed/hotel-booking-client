@@ -20,7 +20,7 @@ const Login = () => {
         setUser(logedInUser);
         console.log('--------------------------->>>>>>>>>>>>>>>>>>>>>>>',logedInUser.email)
         const user = logedInUser.email;
-        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
@@ -46,7 +46,7 @@ const Login = () => {
         console.log(result.user);
         const user = {email}
         // setReload(true);
-        axios.post('https://hotel-booking-server-psi.vercel.app/jwt',user,{withCredentials:true})
+        axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         .then(data=>{
             console.log(data.data)
             if(data.data.success){
@@ -61,7 +61,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="bg-white ">
+    <div className="">
       <Helmet>
         <title>Sunshine City Login</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
@@ -111,8 +111,8 @@ const Login = () => {
                   <input
                     type="email"
                     name="email"
-                    placeholder="example@example.com"
-                    className="block w-full px-4 py-2 mt-2 text-black placeholder-black bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    placeholder="Your Email"
+                    className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-none dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-[#530e39] dark:focus:border-blue-400 focus:ring-[#530e39] focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -124,12 +124,7 @@ const Login = () => {
                     >
                       Password
                     </label>
-                    <a
-                      href="#"
-                      className="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline"
-                    >
-                      Forgot password?
-                    </a>
+                    
                   </div>
                   <div>
                   <input
@@ -137,7 +132,7 @@ const Login = () => {
                     name="password"
                     id="password"
                     placeholder="Your Password"
-                    className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-none dark:placeholder-gray-600  dark:text-black dark:border-gray-700 focus:border-[#530e39] dark:focus:border-blue-400 focus:ring-[#530e39] focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                   <span
                     className="absolute top-[370px] right-10 md:bottom-[154px] md:right-[200px] lg:top-[465px] lg:right-16"
@@ -145,11 +140,17 @@ const Login = () => {
                   >
                     {showPassword ? <FaEye /> : <FaEyeSlash />}
                   </span>
+                  <a
+                      href="#"
+                      className="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline"
+                    >
+                      Forgot password?
+                    </a>
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                  <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#a41e71] rounded-none hover:bg-[#530e39] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                     Sign in
                   </button>
 
@@ -159,7 +160,7 @@ const Login = () => {
 
                   <div
                     onClick={handleGoogleSignIn}
-                    className="cursor-pointer flex items-center justify-center px-6 py-3 mt-4 text-black transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-black hover:bg-gray-50 dark:hover:bg-gray-600"
+                    className="cursor-pointer flex items-center justify-center px-6 py-3 mt-4 text-black transition-colors duration-300 transform border rounded-none dark:border-gray-700 dark:text-black hover:bg-gray-50 dark:hover:bg-gray-600"
                   >
                     <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                       <path
@@ -188,7 +189,7 @@ const Login = () => {
                 Do not have an account yet?{" "}
                 <Link
                   to={"/register"}
-                  className="text-blue-500 focus:outline-none focus:underline hover:underline"
+                  className="text-[#E36414] focus:outline-none focus:underline hover:underline"
                 >
                   Sign up
                 </Link>

@@ -16,7 +16,6 @@ import Swal from "sweetalert2";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
-import { ImFire } from "react-icons/im";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -30,7 +29,7 @@ const RoomDetails = () => {
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
-    axios(`https://hotel-booking-server-psi.vercel.app/room/${id}`, {
+    axios(`http://localhost:5000/room/${id}`, {
       withCredentials: true,
     }).then((res) => {
       setDatas(res.data);
@@ -40,7 +39,7 @@ const RoomDetails = () => {
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios(`https://hotel-booking-server-psi.vercel.app/review/${id}`).then(
+    axios(`http://localhost:5000/review/${id}`).then(
       (data) => {
         setReviews(data.data);
       }
@@ -102,7 +101,7 @@ const RoomDetails = () => {
         toast.success('Successfully Booking')
         axios
           .patch(
-            `https://hotel-booking-server-psi.vercel.app/rooms/${datas._id}`,
+            `http://localhost:5000/rooms/${datas._id}`,
             { availability }
           )
           .then((res) => {
@@ -110,7 +109,7 @@ const RoomDetails = () => {
           });
         axios
           .post(
-            "https://hotel-booking-server-psi.vercel.app/bookings",
+            "http://localhost:5000/bookings",
             addBooking
           )
           .then((res) => {

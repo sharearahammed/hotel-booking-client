@@ -6,6 +6,7 @@ import { AuthContext } from "../Authconfiguration/Authconfiguration";
 // import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Register = () => {
   const { user, createUser, logOut } = useContext(AuthContext);
@@ -13,14 +14,23 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // const cpassword = e.target.cpassword.value;
-    const upload = e.target.upload.value;
+    const upload = e.target.upload.files[0];
+    const formdata = new FormData();
+    formdata.append("image",upload);
     console.log(name, upload, email, password);
+
+    const {data}  = await axios.post(
+      `https://api.imgbb.com/1/upload?key=${
+        import.meta.env.VITE_IMGBB_API_KEY
+      }`,
+      formdata
+    );
+    console.log(data.data.display_url)
 
     // reset error
     setError("");
@@ -38,10 +48,7 @@ const Register = () => {
       );
       return;
     }
-    // if(password !== cpassword){
-    //     setError('Passwords do not match')
-    //     return;
-    // }
+
 
     // Create user
     createUser(email, password)
@@ -52,7 +59,7 @@ const Register = () => {
         // Update profile
         updateProfile(result.user, {
           displayName: name,
-          photoURL: upload,
+          photoURL: data.data.display_url,
         })
           .then(() => console.log("profile updated"))
           .catch();
@@ -88,7 +95,7 @@ const Register = () => {
           </div>
 
           <div className="flex items-center justify-center mt-6">
-            <div className="text-2xl mt-20 w-1/3 pb-4 font-medium text-center text-gray-800 capitalize border-b-2 border-blue-500 dark:border-blue-400 dark:text-white">
+            <div className="text-2xl mt-20 w-1/3 pb-4 font-medium text-center text-white capitalize border-b-2 border-[#E36414] dark:border-blue-400 dark:text-white">
               sign up
             </div>
           </div>
@@ -114,35 +121,8 @@ const Register = () => {
             <input
               name="name"
               type="text"
-              className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full py-3 text-gray-700 bg-white border rounded-none px-11  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Your Name"
-              required
-            />
-          </div>
-
-          <div className="relative flex items-center mt-8">
-            <span className="absolute">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 mx-3 text-black dark:text-gray-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            </span>
-
-            <input
-              name="upload"
-              type="text"
-              className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              placeholder="Profile Photo Url"
               required
             />
           </div>
@@ -168,7 +148,7 @@ const Register = () => {
             <input
               name="email"
               type="email"
-              className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full py-3 text-gray-700 bg-white border rounded-none px-11  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Email address"
               required
             />
@@ -195,8 +175,8 @@ const Register = () => {
             <input
               name="password"
               type={showPassword ? "text" : "password"}
-              className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              placeholder="Confirm Password"
+              className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-none  dark:text-black dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              placeholder="Password"
               required
             />
             <span
@@ -207,8 +187,20 @@ const Register = () => {
             </span>
           </div>
 
+          <div className="relative flex items-center mt-8 text-white">
+            
+
+            <input
+              name="upload"
+              type="file"
+              accept="image/*"
+              className=""
+              required
+            />
+          </div>
+
           <div className="mt-6">
-            <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+            <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#71144e] rounded-none hover:bg-[#530e39] focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
               Sign Up
             </button>
 
@@ -217,14 +209,14 @@ const Register = () => {
               {user ? (
                 <Link
                   to={"/"}
-                  className="text-sm text-blue-500 hover:underline dark:text-blue-400"
+                  className="text-sm text-[#E36414] hover:underline dark:text-blue-400"
                 >
                   Signin here
                 </Link>
               ) : (
                 <Link
                   to={"/login"}
-                  className="text-sm text-blue-500 hover:underline dark:text-blue-400"
+                  className="text-sm text-[#E36414] hover:underline dark:text-blue-400"
                 >
                   Signin here
                 </Link>

@@ -9,7 +9,7 @@ const FeaturRoomCard = () => {
     console.log(room_type)
     const [cards,setCards] = useState([]);
     useEffect(()=>{
-        axios(`https://hotel-booking-server-psi.vercel.app/rooms/${room_type}`)
+        axios(`http://localhost:5000/rooms/${room_type}`)
         .then(data=>{
             setCards(data.data)
         })

@@ -6,7 +6,7 @@ import SectionTitle from "../../../Hook/SectionTitle";
 const FeaturedRooms = () => {
   const [featuredRooms, setFeaturedRooms] = useState([]);
   useEffect(() => {
-    axios("https://hotel-booking-server-psi.vercel.app/rooms").then((data) => {
+    axios("http://localhost:5000/rooms").then((data) => {
       setFeaturedRooms(data.data);
     });
   }, []);

@@ -12,7 +12,7 @@ import { Pagination } from 'swiper/modules';
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios("https://hotel-booking-server-psi.vercel.app/reviews").then((res) => {
+    axios("http://localhost:5000/reviews").then((res) => {
       // console.log(res.data)
       setReviews(res.data);
     });

@@ -56,7 +56,7 @@ const MyBookingTable = ({ booking, idx }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`)
+          .delete(`http://localhost:5000/bookings/${_id}`)
           .then((res) => {
             console.log(res.data);
             toast.success("Booking Cancel Successfully!");
@@ -67,7 +67,7 @@ const MyBookingTable = ({ booking, idx }) => {
         const availability = "available";
         axios
           .patch(
-            `https://hotel-booking-server-psi.vercel.app/rooms/${room_id}`,
+            `http://localhost:5000/rooms/${room_id}`,
             { availability }
           )
           .then((res) => {
@@ -80,7 +80,7 @@ const MyBookingTable = ({ booking, idx }) => {
   const handleDate = () => {
     const date = startDate;
     axios
-      .patch(`https://hotel-booking-server-psi.vercel.app/bookings/${_id}`, {
+      .patch(`http://localhost:5000/bookings/${_id}`, {
         date,
       })
       .then((res) => {
