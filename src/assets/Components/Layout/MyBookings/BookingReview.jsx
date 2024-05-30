@@ -13,7 +13,7 @@ const BookingReview = () => {
     const [booking,setBooking] = useState({})
 
     useEffect(()=>{
-        axios(`http://localhost:5000/booking/${id}`,{withCredentials:true})
+        axios(`https://hotel-booking-server-psi.vercel.app/booking/${id}`,{withCredentials:true})
         .then((res) => {
         setBooking(res.data);
     });
@@ -37,7 +37,7 @@ const BookingReview = () => {
         console.log(review);
     
         if(rating != 'Select Rating'){
-          axios.post("http://localhost:5000/reviews", review).then((res) => {
+          axios.post("https://hotel-booking-server-psi.vercel.app/reviews", review).then((res) => {
           console.log(res.data);
           if (res.data.insertedId) {
             toast.success("Review added Successfully");

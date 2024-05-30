@@ -31,7 +31,7 @@ const RoomDetails = () => {
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:5000/room/${id}`, {
+    axios(`https://hotel-booking-server-psi.vercel.app/room/${id}`, {
       withCredentials: true,
     }).then((res) => {
       setDatas(res.data);
@@ -41,7 +41,7 @@ const RoomDetails = () => {
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios(`http://localhost:5000/review/${id}`).then((data) => {
+    axios(`https://hotel-booking-server-psi.vercel.app/review/${id}`).then((data) => {
       setReviews(data.data);
     });
   }, [id]);

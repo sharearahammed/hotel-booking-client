@@ -67,7 +67,7 @@ const BookingModal = ({ closeModal, isOpen, datas, refetch,addBooking }) => {
                 </div>
                 <div className='mt-2'>
                   <p className='text-sm text-gray-500'>
-                    Price Per Night: {datas?.price_per_night}
+                    Price Per Night: ${datas?.price_per_night}
                   </p>
                 </div>
                 

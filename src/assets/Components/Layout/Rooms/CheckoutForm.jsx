@@ -30,7 +30,7 @@ const CheckoutForm = ({ closeModal, datas, addBooking }) => {
   //   get clientSecret
   const getClientSecret = async (price) => {
     const { data } = await axios.post(
-      `http://localhost:5000/create-payment-intent`,
+      `https://hotel-booking-server-psi.vercel.app/create-payment-intent`,
       price,
       { withCredentials: true }
     );
@@ -106,13 +106,13 @@ const CheckoutForm = ({ closeModal, datas, addBooking }) => {
       try {
         // 2. save payment info in booking collection (db)
         axios
-          .patch(`http://localhost:5000/rooms/${datas._id}`, {
+          .patch(`https://hotel-booking-server-psi.vercel.app/rooms/${datas._id}`, {
             availability: "not available",
           })
           .then((res) => {
             console.log(res.data);
           });
-        axios.post("http://localhost:5000/bookings", addBooking).then((res) => {
+        axios.post("https://hotel-booking-server-psi.vercel.app/bookings", addBooking).then((res) => {
           console.log(res.data);
           if (res.data.insertedId) {
             closeModal();
@@ -161,7 +161,7 @@ const CheckoutForm = ({ closeModal, datas, addBooking }) => {
             {processing ? (
               <ImSpinner9 className="animate-spin m-auto" size={24} />
             ) : (
-              `Pay ${datas?.price_per_night}`
+              `Pay $${datas?.price_per_night}`
             )}
           </button>
           <button
