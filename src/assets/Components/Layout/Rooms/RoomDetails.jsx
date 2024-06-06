@@ -19,10 +19,10 @@ import { Carousel } from "react-responsive-carousel";
 import BookingModal from "./BookingModal";
 
 const RoomDetails = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
   const { user } = useContext(AuthContext);
   // console.log("--------------------------------------", user.email);
   const [startDate, setStartDate] = useState(new Date());
@@ -41,30 +41,30 @@ const RoomDetails = () => {
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios(`https://hotel-booking-server-psi.vercel.app/review/${id}`).then((data) => {
-      setReviews(data.data);
-    });
+    axios(`https://hotel-booking-server-psi.vercel.app/review/${id}`).then(
+      (data) => {
+        setReviews(data.data);
+      }
+    );
   }, [id]);
   // console.log("---------------------------------->>>>", reviews);
   const availability = "not available";
   const addBooking = {
-    room_id:datas._id,
-    name:user.displayName,
-    email:user.email,
-    date:startDate,
-    room_type:datas.room_type,
-    room_description:datas.room_description,
-    price_per_night:datas.price_per_night,
-    maxPrice:datas.maxPrice,
-    minPrice:datas.minPrice,
+    room_id: datas._id,
+    name: user.displayName,
+    email: user.email,
+    date: startDate,
+    room_type: datas.room_type,
+    room_description: datas.room_description,
+    price_per_night: datas.price_per_night,
+    maxPrice: datas.maxPrice,
+    minPrice: datas.minPrice,
     availability,
-    room_images:datas.room_images,
-    special_offers:datas.special_offers,
-    room_size:datas.room_size,
-  }
+    room_images: datas.room_images,
+    special_offers: datas.special_offers,
+    room_size: datas.room_size,
+  };
   console.log(addBooking);
-
-
 
   return (
     <div className="bg-[#F4F2F1] pt-7 md:mt-0 lg:mt-0 md:p-12">
@@ -243,12 +243,12 @@ const RoomDetails = () => {
               </button>
             </div>
             {/* Modal */}
-      <BookingModal
-        isOpen={isOpen}
-        closeModal={closeModal}
-        datas={datas}
-        addBooking={addBooking}
-      />
+            <BookingModal
+              isOpen={isOpen}
+              closeModal={closeModal}
+              datas={datas}
+              addBooking={addBooking}
+            />
           </div>
         </div>
       </div>
