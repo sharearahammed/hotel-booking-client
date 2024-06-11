@@ -8,7 +8,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import toast from "react-hot-toast";
 import { MdRateReview } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { ImCross } from "react-icons/im";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
