@@ -99,7 +99,7 @@ const NavBar = () => {
           <div className="flex items-center justify-between">
             <div className="animate__animated
             animate__jello  animate__delay-2s animate__infinite	infinite">
-            <Link to={'/'}><img  className="h-[40px]" src="/sunshinecity.svg" alt="" /></Link>
+            <Link to={'/'}><img  className="h-[55px] w-[170px]" src="/sunshinecity.png" alt="" /></Link>
             </div>
 
             {/* Mobile menu button */}
